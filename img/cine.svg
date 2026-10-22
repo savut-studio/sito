@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Cine (logo provvisorio)">
+  <!-- Logo provvisorio: tasto play e barra di avanzamento. Stesso linguaggio di Suns. -->
+  <rect width="256" height="256" rx="57.6" fill="#1C1C1C"/>
+  <path d="M104 62 Q96 57 96 66 L96 146 Q96 155 104 150 L170 110 Q177 106 170 102 Z" fill="#ABB8FF" stroke="#ABB8FF" stroke-width="14" stroke-linejoin="round"/>
+  <rect x="48" y="184" width="160" height="16" rx="8" fill="#737373"/>
+  <rect x="48" y="184" width="96" height="16" rx="8" fill="#ABB8FF"/>
+  <circle cx="144" cy="192" r="14" fill="#F2F2F2"/>
+</svg>

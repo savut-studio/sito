@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Vôs (logo provvisorio)">
+  <!-- Logo provvisorio: due tracce di un montaggio (capsule orizzontali) e la testina. Stesso linguaggio di Suns. -->
+  <rect width="256" height="256" rx="57.6" fill="#1C1C1C"/>
+  <rect x="40" y="82" width="100" height="24" rx="12" fill="#ABB8FF"/>
+  <rect x="150" y="82" width="66" height="24" rx="12" fill="#737373"/>
+  <rect x="40" y="128" width="54" height="24" rx="12" fill="#737373"/>
+  <rect x="104" y="128" width="112" height="24" rx="12" fill="#ABB8FF"/>
+  <rect x="40" y="174" width="84" height="24" rx="12" fill="#ABB8FF"/>
+  <rect x="140" y="56" width="8" height="154" rx="4" fill="#F2F2F2"/>
+  <circle cx="144" cy="52" r="14" fill="#E0453F"/>
+</svg>
