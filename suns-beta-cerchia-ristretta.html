@@ -16,6 +16,11 @@
     ol.steps { margin: 0 0 14px; padding-left: 1.4em; }
     ol.steps li { padding-left: 0.3em; }
     ol.steps li::before { content: none; }
+    .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+    .shots.one { grid-template-columns: minmax(0, 420px); }
+    .shots figure { margin: 0; display: grid; gap: 6px; align-content: start; }
+    .shots img { width: 100%; border-radius: 14px; border: 1px solid var(--line); display: block; }
+    .shots figcaption { color: var(--muted); font-size: 13px; }
     .warn { border-left: 3px solid #f2d43b; padding: 2px 0 2px 14px; }
   </style>
 </head>
@@ -40,15 +45,44 @@
     <p>Prima di farla uscire mi serve qualcuno che la strapazzi un po'. Tu, per esempio.</p>
 
     <h2>l'idea</h2>
-    <p>Capire al volo come va, senza leggere numeri. suns guarda solo <b>due misure</b>, sempre quelle:</p>
+    <p>Capire al volo, dai colori, come sta andando la registrazione. Le misure principali sono due:</p>
     <ul>
-      <li><b>LUFS</b>: quanto forte suona, più o meno come lo sente l'orecchio. È il <b>colore</b> del canale.</li>
-      <li><b>Picco</b> (in dBFS): quanto in alto arriva il segnale. È il <b>LED</b>; se tocca il soffitto spunta il
-        <b>triangolo rosso</b> del clip.</li>
+      <li><b>Picco</b> (in dBFS): ti dice se il segnale è andato <b>fuori scala</b>. È il <b>LED</b>; se tocca il
+        soffitto spunta il <b>triangolo rosso</b> del clip.</li>
+      <li><b>Loudness</b> (in LUFS): ti dice <b>quanto suona forte</b>, più o meno come lo sente l'orecchio. È il
+        <b>colore</b> del canale.</li>
     </ul>
+    <p>Che tu abbia spazio per un grafico, per una mattonella o solo per una pillola, vedi sempre queste due misure,
+      con l'avviso del clip.</p>
+    <div class="shots">
+      <figure><img src="img/beta-grafico.jpg" alt="Un canale in grande con il grafico, le tacche rosse dei clip e sotto gli altri canali">
+        <figcaption>il grafico: la storia degli ultimi secondi, le tacche rosse dei clip</figcaption></figure>
+      <figure><img src="img/beta-mattonelle.jpg" alt="Otto canali come mattonelle colorate con il LED">
+        <figcaption>le mattonelle: colore, LED e triangolo</figcaption></figure>
+      <figure><img src="img/beta-pillole.jpg" alt="Quarantotto canali come pillole colorate">
+        <figcaption>48 canali in pillole: resta il colore, e il triangolo se c'è un clip</figcaption></figure>
+    </div>
+
+    <h3>il picco: lì c'è uno standard</h3>
+    <p>Per il LED scegli la scala: <b>Semplice</b> (la nostra: verde ok, giallo alto, rosso sei al limite) oppure gli
+      standard dei broadcaster, <b>EBU</b> o <b>SMPTE</b>. Il clip invece non si discute: è quando il segnale tocca il
+      massimo (0 dBFS).</p>
+
+    <h3>la loudness: qui non c'è giusto o sbagliato</h3>
+    <p>Quanto forte registrare dipende da cosa fai: una voce in studio non è un concerto dal mixer. Quindi il colore non
+      ti dice "bene" o "male", ti dice se stai seguendo il <b>tuo target</b>: una fascia di volume che scegli tu, o che
+      suns tara sulla tua voce in 10 secondi.</p>
     <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
-    <p class="muted">Colore: blu un po' basso, pervinca giusto, magenta troppo forte. LED: verde ok, giallo alto, rosso
-      sei al limite.</p>
+    <p class="muted">Blu sotto il target, lilla dentro, magenta sopra. Di partenza il target è "Podcast", da −27 a −15
+      LUFS: cambialo in Impostazioni › Misure.</p>
+
+    <h3>e se sei affezionato ai numeri</h3>
+    <p>Ci sono anche quelli: tocca il grafico. Qui con la vista Fonico (il meter di picco al posto del LED) e la scala
+      EBU.</p>
+    <div class="shots one">
+      <figure><img src="img/beta-numeri.jpg" alt="Un canale con i numeri: −27,6 LUFS ST, −23,8 LUFS M, picco −13,2 dBFS, meter di picco in scala EBU">
+        <figcaption>LUFS ST in grande, sotto LUFS M e picco in dBFS</figcaption></figure>
+    </div>
 
     <h2>cosa fa</h2>
     <ul>
