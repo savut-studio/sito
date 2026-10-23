@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Pagina nascosta per gli amici: nessun link dal resto del sito, niente indicizzazione. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>suns · beta</title>
+  <meta name="description" content="La beta di suns: registratore multitraccia per iPhone e iPad.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cta { display: inline-flex; align-items: center; gap: 10px; margin: 6px 0 10px; padding: 14px 22px;
+      border-radius: 999px; background: var(--accent); color: #14172b; font-weight: 700; text-decoration: none; }
+    .cta:hover { filter: brightness(1.06); }
+    .cta.off { background: var(--surface); color: var(--muted); border: 1px dashed var(--line); pointer-events: none; }
+    ol.steps { margin: 0 0 14px; padding-left: 1.4em; }
+    ol.steps li { padding-left: 0.3em; }
+    ol.steps li::before { content: none; }
+    .warn { border-left: 3px solid #f2d43b; padding: 2px 0 2px 14px; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./">savût</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <img src="img/suns.png" alt="Icona di suns">
+      <div>
+        <h1>ciao, questa è suns</h1>
+        <p>un registratore multitraccia per iPhone e iPad. <span class="tag on">[ beta ]</span></p>
+      </div>
+    </div>
+
+    <p class="lead">Attacchi il telefono a una scheda audio o al mixer con il cavo USB, premi Registra, e lui ti salva
+      ogni canale nel suo file. Da 1 a 64 canali. E mentre registri vedi subito se i volumi vanno bene, perché ogni
+      canale ha il suo colore.</p>
+    <p>Mi serve qualcuno che la provi sul serio, prima che esca. Se ti va, sei la persona giusta.</p>
+
+    <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="muted">Blu: un po' basso. Pervinca: giusto. Magenta: troppo forte. Facile.</p>
+
+    <h2>cosa fa</h2>
+    <ul>
+      <li><b>Un file per canale</b>: WAV a 24 bit, li apri in qualsiasi programma di montaggio.</li>
+      <li><b>Fino a 64 canali</b>, dalla schedina con 2 ingressi al mixer grosso. Va anche con il microfono del
+        telefono.</li>
+      <li><b>Colori per il volume</b> (loudness, in LUFS), un <b>LED</b> per il picco e un <b>triangolo rosso</b> se
+        qualcosa va in clip.</li>
+      <li><b>Registra anche a schermo bloccato</b>, e la vedi sulla schermata di blocco.</li>
+      <li><b>Marker</b> mentre registri, e una <b>scaletta</b> da spuntare (ogni punto spuntato diventa un marker).</li>
+      <li><b>Progetti e riascolto</b>: ritrovi le riprese in ordine e le riascolti con i marker.</li>
+      <li><b>Niente account, niente cloud</b>: resta tutto sul tuo telefono, nell'app File.</li>
+    </ul>
+    <p>Dentro c'è anche un tutorial: Impostazioni › Consigli e aiuto › Non so da dove partire.</p>
+
+    <h2>su cosa gira</h2>
+    <ul>
+      <li><b>iPhone o iPad con iOS 27</b> (o iPadOS 27). Se il tuo è più vecchio, per ora niente, mi spiace.</li>
+      <li><b>Schede audio e mixer USB "senza driver"</b> (class compliant). L'ho provata con Behringer UMC202HD,
+        XR18 e X32, e un vecchio iPhone SE regge 18 canali per 40 minuti senza perdere niente.</li>
+      <li>iPad con la presa Lightning: serve l'adattatore <b>Lightning–USB 3 per fotocamere</b>, quello con la presa
+        per caricare.</li>
+      <li><b>Su un iPad vero non l'ho mai provata</b>: se ce l'hai, raccontami come va.</li>
+    </ul>
+
+    <h2>è una beta</h2>
+    <p class="warn">Vuol dire che qualcosa può non funzionare. Provala tanto, ma non affidarle la registrazione della
+      vita. Per le cose importanti lascia il formato di partenza, il WAV: i formati compressi (in Sperimentali)
+      occupano meno spazio, ma se l'app si chiude di colpo possono perdere tutta la ripresa.</p>
+
+    <h2>come la installi</h2>
+    <ol class="steps">
+      <li>Scarica <b>TestFlight</b> dall'App Store: è l'app di Apple per le beta, gratis.</li>
+      <li>Dal telefono, tocca il pulsante qui sotto.</li>
+      <li>In TestFlight tocca <b>Installa</b>. Fatto.</li>
+    </ol>
+    <!-- LINK DELLA BETA: metti qui l'indirizzo di TestFlight (https://testflight.apple.com/join/…) al posto di "#",
+         e togli la classe "off". -->
+    <a class="cta off" id="testflight" href="#">Link della beta in arrivo</a>
+
+    <h2>dimmi com'è andata</h2>
+    <p>Il modo più comodo: fai uno screenshot dentro suns e iOS ti propone di mandarmelo come feedback della beta, con
+      due righe. Oppure apri TestFlight, scegli suns e invia un feedback da lì. Altrimenti scrivimi a
+      <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <p>Mi interessa tutto: cosa non hai capito, cosa ti è piaciuto, che scheda o mixer hai usato, quanti canali, se il
+      telefono si è scaldato. Grazie!</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>© 2026 savût</span>
+      <span><a href="privacy.html">privacy</a></span>
+    </div>
+  </footer>
+</body>
+</html>
