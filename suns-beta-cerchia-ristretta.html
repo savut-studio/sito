@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Pagina nascosta per la cerchia ristretta: nessun link dal resto del sito, niente indicizzazione. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>suns · beta</title>
+  <meta name="description" content="La beta di suns: registratore multitraccia per iPhone e iPad.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cta { display: inline-flex; align-items: center; gap: 10px; margin: 6px 0 10px; padding: 14px 22px;
+      border-radius: 999px; background: var(--accent); color: #14172b; font-weight: 700; text-decoration: none; }
+    .cta:hover { filter: brightness(1.06); }
+    ol.steps { margin: 0 0 14px; padding-left: 1.4em; }
+    ol.steps li { padding-left: 0.3em; }
+    ol.steps li::before { content: none; }
+    .warn { border-left: 3px solid #f2d43b; padding: 2px 0 2px 14px; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./">savût</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <img src="img/suns.png" alt="Icona di suns">
+      <div>
+        <h1>ciao, questa è suns</h1>
+        <p>un registratore multitraccia per iPhone e iPad. <span class="tag on">[ beta ]</span></p>
+      </div>
+    </div>
+
+    <p class="lead">Attacchi il telefono alla scheda audio o al mixer, premi Registra, e ogni canale finisce nel suo
+      file. Da 1 a 64 canali. Tu intanto guardi i colori e sai subito se sta andando bene o se qualcuno sta urlando.</p>
+    <p>Prima di farla uscire mi serve qualcuno che la strapazzi un po'. Tu, per esempio.</p>
+
+    <h2>l'idea</h2>
+    <p>Capire al volo come va, senza leggere numeri. suns guarda solo <b>due misure</b>, sempre quelle:</p>
+    <ul>
+      <li><b>LUFS</b>: quanto forte suona, più o meno come lo sente l'orecchio. È il <b>colore</b> del canale.</li>
+      <li><b>Picco</b> (in dBFS): quanto in alto arriva il segnale. È il <b>LED</b>; se tocca il soffitto spunta il
+        <b>triangolo rosso</b> del clip.</li>
+    </ul>
+    <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="muted">Colore: blu un po' basso, pervinca giusto, magenta troppo forte. LED: verde ok, giallo alto, rosso
+      sei al limite.</p>
+
+    <h2>cosa fa</h2>
+    <ul>
+      <li><b>Un WAV a 24 bit per canale</b>: li apri in qualsiasi programma di montaggio.</li>
+      <li><b>Fino a 64 canali</b>, dalla schedina a 2 ingressi al mixer grosso. Anche con il microfono del telefono.</li>
+      <li><b>Registra a schermo bloccato</b>, e la vedi sulla schermata di blocco.</li>
+      <li><b>Marker</b> e una <b>scaletta</b> da spuntare: ogni punto spuntato è un marker.</li>
+      <li><b>Progetti e riascolto</b> con i marker.</li>
+      <li><b>Niente account, niente cloud</b>: è tutto sul tuo telefono, nell'app File.</li>
+      <li>Se ti perdi: Impostazioni › Consigli e aiuto › Non so da dove partire.</li>
+    </ul>
+
+    <h2>il reparto esperimenti</h2>
+    <p>In Impostazioni › Sperimentali c'è la roba ancora in prova. Usala, ma senza fidarti troppo:</p>
+    <ul>
+      <li><b>Formato di registrazione</b>: oltre al WAV 24 bit, WAV 16 bit, ALAC (senza perdita) e AAC (occupa pochissimo).
+        Ma attenzione: in ALAC e AAC, se l'app si chiude di colpo, la ripresa può sparire tutta.</li>
+      <li><b>Esportazione</b>: un progetto o una ripresa in un file ZIP, in WAV, ALAC o AAC. Con le riprese lunghe ci mette
+        un po'.</li>
+      <li><b>Prova di carico</b>: fa registrare al telefono una demo con tanti canali e ti dice se regge, quanto scalda e
+        quanta batteria si mangia.</li>
+      <li><b>Ripara le riprese interrotte</b>: se l'app si chiude di colpo durante una ripresa in WAV, alla riapertura
+        sistema i file.</li>
+    </ul>
+
+    <h2>su cosa gira</h2>
+    <ul>
+      <li><b>iPhone o iPad con iOS 27.</b> Più vecchio? Per ora niente, ma fammi sapere su che dispositivo e sistema
+        operativo volevi usarla: se siete in tanti, ci penso.</li>
+      <li><b>Schede e mixer USB "senza driver"</b>. Provata con UMC202HD, XR18 e X32; un iPhone SE del 2020 si è fatto 18
+        canali per 40 minuti senza perdere un campione.</li>
+      <li>iPad con la presa Lightning: serve l'adattatore <b>Lightning–USB 3 per fotocamere</b>, quello con la presa per
+        caricare.</li>
+      <li><b>Su un iPad vero non l'ho mai provata.</b> Se ce l'hai, sei la mia cavia preferita.</li>
+    </ul>
+
+    <h2>è una beta</h2>
+    <p class="warn">Quindi può fare scherzi. Provala tanto, ma non affidarle il matrimonio di tua sorella. Per le cose
+      serie resta sul WAV, il formato di partenza.</p>
+
+    <h2>come la installi</h2>
+    <ol class="steps">
+      <li>Scarica <b>TestFlight</b> dall'App Store (è di Apple, gratis).</li>
+      <li>Dal telefono tocca il pulsante qui sotto.</li>
+      <li>In TestFlight tocca <b>Installa</b>.</li>
+    </ol>
+    <a class="cta" id="testflight" href="https://testflight.apple.com/join/b1xaKZYX">Apri la beta in TestFlight</a>
+    <p class="muted">Se il pulsante non va: testflight.apple.com/join/b1xaKZYX</p>
+
+    <h2>dimmi com'è andata</h2>
+    <p>Fai uno screenshot dentro suns: iOS ti propone di mandarmelo come feedback della beta. Oppure da TestFlight, o a
+      <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <p>Mi interessa tutto: cosa non hai capito, cosa ti è piaciuto, che scheda o mixer, quanti canali, se il telefono
+      scaldava. Anche le critiche, soprattutto quelle. Grazie!</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>© 2026 savût</span>
+      <span><a href="privacy.html">privacy</a></span>
+    </div>
+  </footer>
+</body>
+</html>
