@@ -84,6 +84,17 @@ a.tool:hover { border-color: var(--accent); }
 .band span:nth-child(2) { flex: 2; background: #A9B6FF; }
 .band span:nth-child(3) { flex: 1; background: #D14FD0; }
 
+/* Modo "Continua" di Suns: un'unica sfumatura, nessuna zona giusta o sbagliata. */
+.band.cont { background: linear-gradient(90deg, #3355E0 0%, #A9B6FF 60%, #D14FD0 100%); }
+
+/* Schermate dell'app (pagina di suns e pagina della beta). */
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.shots.one { grid-template-columns: minmax(0, 420px); }
+.shots figure { margin: 0; display: grid; gap: 6px; align-content: start; }
+.shots img { width: 100%; border-radius: 14px; border: 1px solid var(--line); display: block; }
+.shots figcaption { color: var(--muted); font-size: 13px; }
+.warn { border-left: 3px solid #f2d43b; padding: 2px 0 2px 14px; }
+
 footer.site .wrap {
   display: flex; gap: 10px 20px; flex-wrap: wrap; justify-content: space-between;
   padding-top: 18px; padding-bottom: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px;

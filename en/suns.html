@@ -31,29 +31,101 @@
       </div>
     </div>
 
-    <p class="lead">Record 1 to 64 channels from a class-compliant multichannel USB audio interface or mixer, one that works without drivers. The phone's own microphone works too.
-      One WAV file per channel, and on every channel a loudness meter that tells you at a glance whether the level is right.</p>
+    <p class="lead">Plug your phone into a class-compliant multichannel USB audio interface or mixer (the kind that works without drivers), hit Record, and every channel goes to its own
+      file. 1 to 64 channels. Meanwhile you watch the colours and know at a glance whether it's going well or someone is shouting.</p>
+    <p>The TestFlight beta is about to start: when it's ready, the way to try it will appear here.</p>
 
-    <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
-    <p class="muted">Blue below the target range, periwinkle inside it, magenta above it: you read the level from the colour.</p>
-
-    <h2><span class="n">01</span>who it's for</h2>
+    <h2>the idea</h2>
+    <p>Know at a glance, from the colours, how the recording is going. There are two main measurements:</p>
     <ul>
-      <li>Podcasts and interviews: a few microphones, a running order to tick off, named markers.</li>
-      <li>Conferences and concerts: every channel of the mixer, hours of recording even with the screen locked.</li>
-      <li>Editing: mono 24-bit Broadcast WAV files with markers, ready for any editor.</li>
+      <li><b>Peak</b> (in dBFS): tells you whether the signal went <b>out of range</b>. It's the <b>LED</b>. If it touches
+        the ceiling (0 dBFS) the clip <b>triangle</b> turns red and counts how many times it happened.</li>
+      <li><b>Loudness</b> (in LUFS): tells you <b>how loud it sounds</b>, more or less as the ear hears it. It's the
+        <b>colour</b> of the channel.</li>
     </ul>
+    <p>Whether you have room for a graph, a tile or just a pill, you always see these two measurements, with the clip warning.</p>
+    <div class="shots">
+      <figure><img src="../img/beta-grafico.jpg" alt="One channel large with its graph, red clip ticks, and the other channels below">
+        <figcaption>the graph: the last few seconds, with red ticks for clips</figcaption></figure>
+      <figure><img src="../img/beta-mattonelle.jpg" alt="Eight channels as coloured tiles with the LED">
+        <figcaption>tiles: colour, LED and triangle</figcaption></figure>
+      <figure><img src="../img/beta-pillole.jpg" alt="Forty-eight channels as coloured pills">
+        <figcaption>48 channels as pills: the colour stays, and the triangle if there's a clip</figcaption></figure>
+    </div>
 
-    <h2><span class="n">02</span>what it does</h2>
+    <h3>peak: there's a standard for that</h3>
+    <p>For the LED you pick the scale: <b>Simple</b> (our own: green is fine, yellow from −6 dBFS, red from −1 dBFS, meaning
+      you're at the limit) or the broadcasters' standards, <b>EBU</b> or <b>SMPTE</b>. Clipping is not up for debate: it's
+      when the signal touches the maximum (0 dBFS). The triangle is grey with a 0 while all is well; on a clip it turns red
+      with the count, and a tap resets it.</p>
+
+    <h3>loudness: there's no right or wrong here</h3>
+    <p>How loud to record depends on what you're doing: a voice in a studio is not a concert from a mixer. So by default the
+      colour doesn't say "good" or "bad": it runs from blue (quiet) to magenta (loud) in one gradient, and tells silence
+      from background noise.</p>
+    <div class="band cont" aria-hidden="true"></div>
+    <p class="muted">Continuous mode (the default): from blue to magenta, no right or wrong zone.</p>
+    <p>If you do have a specific goal, switch to <b>Target</b> mode: pick a loudness range, or let suns calibrate it on your
+      voice in 10 seconds, and the colour tells you whether you're following it.</p>
+    <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="muted">Blue below the target, periwinkle inside it, magenta above it. The "Podcast" preset runs from −27 to −15
+      LUFS; there are also "Built-in microphone" and "Live mixer", and you can set it by hand. Change it in Settings ›
+      Measures › Loudness colours.</p>
+
+    <h3>and if you're fond of numbers</h3>
+    <p>Those are there too: tap the graph. Here with the Engineer view (the peak meter instead of the LED) and the EBU scale.</p>
+    <div class="shots one">
+      <figure><img src="../img/beta-numeri.jpg" alt="One channel with numbers: −27.6 LUFS ST, −23.8 LUFS M, peak −13.2 dBFS, peak meter on the EBU scale">
+        <figcaption>LUFS ST large, with LUFS M and peak in dBFS below</figcaption></figure>
+    </div>
+
+    <h2>what it does</h2>
     <ul>
-      <li>Measures loudness to ITU-R BS.1770 (momentary and short-term LUFS) and sample peak in dBFS.</li>
-      <li>Flags clipping, channel by channel.</li>
-      <li>Projects, one folder per take, playback with markers.</li>
-      <li>Everything stays on your phone: no account, no servers.</li>
+      <li><b>One 24-bit WAV per channel</b>: open them in any editor.</li>
+      <li><b>Up to 64 channels</b>, from a little 2-input interface to a big mixer. The phone's own microphone works too.</li>
+      <li><b>Records with the screen locked</b>, and you can see it on the lock screen. At 20 % and 10 % battery it warns
+        you, on the lock screen too.</li>
+      <li><b>Before you start</b>: when you press Record it reminds you of what can stop a take (aeroplane mode with Wi-Fi
+        off, alarms, phone on charge).</li>
+      <li><b>If a call or an alarm stops the take</b>, it closes the files and starts again by itself in a new take of the
+        same project (switch it off in Avoid interruptions › Restart by itself).</li>
+      <li>If the phone can't keep up and loses samples, <b>it tells you straight away</b>, while you record.</li>
+      <li><b>Markers</b> and a <b>running order</b> to tick off: every ticked item is a marker.</li>
+      <li><b>Projects and playback</b> with markers, also from the project name: "Play the last take".</li>
+      <li><b>No account, no cloud</b>: everything is on your phone, in the Files app.</li>
+      <li>If you get lost: Settings › Tips and help › I don't know where to start.</li>
     </ul>
     <p class="muted">The app is in Italian for now; English is on its way.</p>
 
-    <h2><span class="n">03</span>info</h2>
+    <h2>the experiments department</h2>
+    <p>In Settings › Experimental there's the stuff still being tested. Use it, but don't trust it too much:</p>
+    <ul>
+      <li><b>Recording format</b>: besides 24-bit WAV, 16-bit WAV, ALAC (lossless) and AAC (very small). Careful, though: in
+        ALAC and AAC, if the app is killed abruptly, the whole take can vanish. That's why, if the battery drops to 5 %
+        (not charging), suns stops by itself and saves the files.</li>
+      <li><b>Export</b> (switch on with "Enable export"): a project or a take as a ZIP file, in WAV, ALAC or AAC. Long takes
+        take a while.</li>
+      <li><b>Load test</b>: has the phone record a demo with lots of channels and tells you whether it copes, how hot it
+        gets and how much battery it uses.</li>
+      <li><b>Repair interrupted takes</b>: if the app is killed abruptly during a WAV take, it fixes the files when you
+        reopen it.</li>
+    </ul>
+
+    <h2>what it runs on</h2>
+    <ul>
+      <li><b>iPhone or iPad with iOS 27.</b> Older? Not for now. On iPhone it stays upright; on iPad it turns in every direction.</li>
+      <li><b>Class-compliant USB interfaces and mixers</b> ("driverless"). Tried with UMC202HD, XR18 and X32; an iPhone SE
+        (2020) recorded 18 channels for 40 minutes without losing a sample.</li>
+      <li>With a Lightning port you obviously need a USB adapter.</li>
+      <li><b>It has never been tried on a real iPad.</b></li>
+    </ul>
+
+    <h2>beta coming soon</h2>
+    <p class="warn">suns is in beta: for now only a few people are trying it. When the beta opens up, the link to install it
+      with TestFlight will appear here.</p>
+    <p>Meanwhile, if you have questions or an interface to try: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+
+    <h2>info</h2>
     <p><a href="support.html">support</a> · <a href="privacy.html">privacy</a></p>
   </main>
 
