@@ -10,17 +10,25 @@
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    .cta { display: inline-flex; align-items: center; gap: 10px; margin: 6px 0 10px; padding: 14px 22px;
-      border-radius: 999px; background: var(--accent); color: #14172b; font-weight: 700; text-decoration: none; }
-    .cta:hover { filter: brightness(1.06); }
-    ol.steps { margin: 0 0 14px; padding-left: 1.4em; }
-    ol.steps li { padding-left: 0.3em; }
-    ol.steps li::before { content: none; }
-    .zone { margin: 0 0 30px; padding: 16px 18px; border: 1px dashed var(--accent); border-radius: 10px;
+    .zone { margin: 0 0 18px; padding: 18px 20px; border: 1px dashed var(--accent); border-radius: 12px;
       background: var(--surface); }
-    .zone .tag { display: block; margin-bottom: 4px; letter-spacing: 0.06em; }
-    .zone h1 { margin: 0 0 6px; }
+    .zone .tag { display: block; margin-bottom: 6px; letter-spacing: 0.06em; }
+    .zone h1 { margin: 0 0 8px; }
     .zone p { margin: 0; color: var(--muted); }
+    .install { margin: 0 0 36px; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+    .install h2 { margin: 0 0 14px; }
+    .cta { display: flex; align-items: center; justify-content: center; margin: 0 0 14px; padding: 15px 22px;
+      border-radius: 999px; background: var(--accent); color: #14172b; font-weight: 700; text-decoration: none; text-align: center; }
+    .cta:hover { filter: brightness(1.06); }
+    ol.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 0 0 12px;
+      padding: 0; list-style: none; counter-reset: step; }
+    ol.steps li { counter-increment: step; margin: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px;
+      font-size: 13px; line-height: 1.5; }
+    ol.steps li::before { content: counter(step); position: static; display: block; margin-bottom: 2px;
+      color: var(--accent); font-weight: 700; }
+    .install .muted { margin: 0; font-size: 13px; }
+    .hero h2 { margin: 0; padding: 0; border: 0; text-transform: none; font-size: 17px; }
+    .zone { margin-top: 8px; }
   </style>
 </head>
 <body>
@@ -41,18 +49,28 @@
     <p class="muted">Se il pulsante non va: testflight.apple.com/join/b1xaKZYX</p> </p>
     </div>
 
+    <section class="install">
+      <h2>installa la beta</h2>
+      <a class="cta" id="testflight" href="https://testflight.apple.com/join/b1xaKZYX">Apri la beta in TestFlight</a>
+      <ol class="steps">
+        <li>Scarica <b>TestFlight</b> dall'App Store (è di Apple, gratis).</li>
+        <li>Dal telefono tocca il pulsante qui sopra.</li>
+        <li>In TestFlight tocca <b>Installa</b>.</li>
+      </ol>
+      <p class="muted">Se il pulsante non va: testflight.apple.com/join/b1xaKZYX</p>
+    </section>
+
     <div class="hero">
       <img src="img/suns.png" alt="Icona di suns">
       <div>
-        <h2 style="margin:0">ciao, questa è suns</h2>
+        <h2>ciao, questa è suns</h2>
         <p>un registratore multitraccia per iPhone e iPad. <span class="tag on">[ beta ]</span></p>
       </div>
     </div>
 
     <p class="lead">Attacchi il telefono a una scheda audio o a un mixer USB multicanale class compliant (quelli che vanno senza driver), premi Registra, e ogni canale finisce nel suo
       file. Da 1 a 64 canali. Tu intanto guardi i colori e sai subito se sta andando bene o se qualcuno sta urlando.</p>
-<p>Prima di farla uscire mi serve qualcuno che la strapazzi un po'. Tu, per esempio.</p>
-
+    <p>Prima di farla uscire mi serve qualcuno che la strapazzi un po'. Tu, per esempio.</p>
 
     <h2>l'idea</h2>
     <p>Capire al volo, dai colori, come sta andando la registrazione. Le misure principali sono due:</p>
@@ -149,21 +167,11 @@
     <p class="warn">Quindi può fare scherzi. Provala tanto, ma non affidarle il concerto o l'intervista della vita. Per le cose
       serie resta sul WAV, il formato di partenza.</p>
 
-    <h2>come la installi</h2>
-    <ol class="steps">
-      <li>Scarica <b>TestFlight</b> dall'App Store (è di Apple, gratis).</li>
-      <li>Dal telefono tocca il pulsante qui sotto.</li>
-      <li>In TestFlight tocca <b>Installa</b>.</li>
-    </ol>
-    <a class="cta" id="testflight" href="https://testflight.apple.com/join/b1xaKZYX">Apri la beta in TestFlight</a>
-    <p class="muted">Se il pulsante non va: testflight.apple.com/join/b1xaKZYX</p>
-
     <h2>dimmi com'è andata</h2>
     <p>Fai uno screenshot dentro suns: iOS ti propone di mandarmelo come feedback della beta. Oppure da TestFlight, o a
       <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
     <p>Mi interessa tutto: cosa non hai capito, cosa ti è piaciuto, che scheda o mixer, quanti canali, se il telefono
       scaldava. Anche le critiche, soprattutto quelle. Grazie!</p>
-
 
   </main>
 
