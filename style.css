@@ -100,6 +100,8 @@ footer.site .wrap {
   padding-top: 18px; padding-bottom: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px;
 }
 footer.site a { color: var(--muted); }
+footer.site .mark { display: inline-flex; align-items: center; gap: 10px; }
+footer.site .mark img { height: 23px; width: auto; opacity: 0.6; }
 
 @media (max-width: 520px) {
   body { font-size: 14px; }
