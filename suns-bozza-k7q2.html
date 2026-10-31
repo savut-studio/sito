@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bozza della nuova pagina di suns: nessun link dal resto del sito, niente indicizzazione. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>suns · bozza</title>
+  <meta name="description" content="Bozza della nuova pagina di suns.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .top { text-align: center; margin: 6px 0 8px; }
+    .top img { width: 96px; height: 96px; border-radius: 22px; }
+    .top h1 { font-size: 38px; margin: 14px 0 6px; }
+    .top .what { font-size: 20px; line-height: 1.45; margin: 0 auto 14px; max-width: 24em; }
+    .top .how { color: var(--muted); max-width: 36em; margin: 0 auto 14px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 18px 0; }
+    .card { padding: 18px 18px 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .card h3 { margin: 0 0 10px; font-size: 16px; }
+    .card .big { font-size: 28px; color: var(--accent); line-height: 1; margin-bottom: 10px; }
+    .card p { color: var(--muted); }
+    .aside { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin: 22px 0; }
+    details { margin: 10px 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+    summary { cursor: pointer; padding: 12px 16px; font-weight: 700; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::before { content: "+"; display: inline-block; width: 1.4em; color: var(--accent); }
+    details[open] > summary::before { content: "–"; }
+    details > :not(summary) { margin-left: 16px; margin-right: 16px; }
+    details > :last-child { margin-bottom: 16px; }
+    .lab { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 14px 0; }
+    .lab > div { padding: 14px 16px 2px; border: 1px dashed var(--line); border-radius: 10px; }
+    .lab h4 { margin: 0 0 6px; font-size: 14px; color: var(--accent); }
+    .lab p { font-size: 13.5px; color: var(--muted); }
+    .steps3 { display: grid; gap: 10px; margin: 16px 0; }
+    .steps3 > div { display: grid; grid-template-columns: 110px 1fr; gap: 14px; align-items: start; }
+    .steps3 b { color: var(--accent); }
+    @media (max-width: 520px) { .top h1 { font-size: 32px; } .top .what { font-size: 18px; } .steps3 > div { grid-template-columns: 1fr; gap: 0; } }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <span class="tag on">[ bozza · non pubblica ]</span>
+    </div>
+  </header>
+
+  <main class="wrap app-suns">
+
+    <!-- 1. cos'è -->
+    <div class="top">
+      <img src="img/suns.png" alt="Icona di suns">
+      <h1>suns</h1>
+      <p class="what">Un registratore audio multitraccia per iPhone, iPad e Mac.</p>
+      <p class="how">Colleghi una scheda audio o un mixer USB (se va senza installare driver, si dice <i>class compliant</i>: quasi
+        tutti vanno) e premi Registra. Ogni canale finisce nel suo file. <span class="tag on">[ beta in arrivo ]</span></p>
+    </div>
+
+    <!-- 2. due scene -->
+    <h2><span class="n">01</span>due scene</h2>
+    <p>Per capire a cosa serve, immagina due persone diverse.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>il podcaster</h3>
+        <p>Arriva con il telefono, una scheda audio a due canali e due microfoni. Premi Registra e tieni d'occhio i volumi:
+          se uno dei due si avvicina troppo al microfono lo vedi subito, mentre stai ancora parlando.</p>
+        <p>Quando finisci i file sono già lì, sul telefono: una traccia a testa, pronte da montare.</p>
+      </div>
+      <div class="card">
+        <h3>il fonico</h3>
+        <p>Sta facendo un concerto: un mixer con tanti canali, un computer. Colleghi il mixer al Mac e ogni canale va su una
+          traccia sua, mentre controlli tutti i colori insieme.</p>
+        <p>Il mix lo fai il giorno dopo, con calma, con tutte le tracce separate.</p>
+      </div>
+    </div>
+    <p class="aside">Ma non sono due app. <b>È sempre la stessa suns</b>, e le scene si possono incrociare: 48 canali di un mixer su un
+      vecchio telefono, oppure il tuo Mac potentissimo usato solo per un podcast con un microfono USB. I limiti sono la
+      fantasia (e, con tanti canali, quanto regge il tuo dispositivo: suns ha una prova di carico per scoprirlo).</p>
+
+    <!-- 3. come ti aiuta -->
+    <h2><span class="n">02</span>come ti aiuta</h2>
+    <p>Con i colori. Mentre registri ci sono <b>due cose</b> da guardare, sempre, e basta quelle.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="big">▲</div>
+        <h3>non è andato fuori scala?</h3>
+        <p>Se il suono è più forte di quello che la scheda riesce a rappresentare, si dice che <b>clippa</b>: la parte in più
+          è persa e <b>non si recupera in nessun modo</b>. Per questo il triangolo diventa rosso e conta quante volte è
+          successo: se lo vedi mentre registri, abbassi.</p>
+      </div>
+      <div class="card">
+        <div class="big">●</div>
+        <h3>il volume è abbastanza?</h3>
+        <p>Il <b>colore</b> del canale ti dice quanto suona forte, più o meno come lo sente l'orecchio: dal blu (piano)
+          al magenta (forte). Troppo piano e ti ritrovi con il rumore di fondo; troppo forte e ti avvicini al clip.</p>
+      </div>
+    </div>
+    <div class="shots one">
+      <figure><img src="img/beta-pillole.jpg" alt="Quarantotto canali come pillole colorate, con il triangolo del clip">
+        <figcaption>la versione più piccola: una pillola per canale, qui 48. Colore e triangolo, nient'altro.</figcaption></figure>
+    </div>
+
+    <!-- 4. più spazio, più dettagli -->
+    <h2><span class="n">03</span>più spazio hai, più vedi</h2>
+    <p>Le due informazioni sono sempre quelle. Se hai pochi canali, o uno schermo grande, ogni canale cresce e ti
+      racconta di più:</p>
+    <div class="steps3">
+      <div><b>pillola</b><span>colore e triangolo del clip.</span></div>
+      <div><b>mattonella</b><span>in più il LED del picco, che si accende quando ti avvicini al fuori scala.</span></div>
+      <div><b>grafico</b><span>la storia degli ultimi secondi, con una tacca rossa per ogni clip: capisci se è stato un colpo solo o un problema che continua.</span></div>
+      <div><b>numeri</b><span>toccando il grafico: per chi si fida solo di quelli.</span></div>
+    </div>
+    <div class="shots">
+      <figure><img src="img/beta-mattonelle.jpg" alt="Otto canali come mattonelle colorate con il LED">
+        <figcaption>le mattonelle: colore, LED e triangolo</figcaption></figure>
+      <figure><img src="img/beta-grafico.jpg" alt="Un canale in grande con il grafico, le tacche rosse dei clip e sotto gli altri canali">
+        <figcaption>il grafico: gli ultimi secondi e le tacche dei clip</figcaption></figure>
+      <figure><img src="img/beta-numeri.jpg" alt="Un canale con i numeri: −27,6 LUFS ST, −23,8 LUFS M, picco −13,2 dBFS">
+        <figcaption>i numeri, tutti</figcaption></figure>
+    </div>
+
+    <!-- 5. saperne di più -->
+    <h2><span class="n">04</span>voglio saperne di più</h2>
+    <details>
+      <summary>il picco e il clip</summary>
+      <p>Il <b>picco</b> (in dBFS) dice quanto vicino sei al soffitto, che è 0 dBFS: oltre quello non si può andare e il
+        segnale si taglia. Il <b>LED</b> lo mostra a colori: verde va bene, giallo da −6 dBFS, rosso da −1 dBFS, cioè sei al limite.</p>
+      <p>Il <b>clip</b> invece non si discute: è quando il segnale tocca 0 dBFS. Il triangolo è grigio con uno 0 finché va
+        tutto bene; se c'è un clip diventa rosso con il numero, e un tocco lo azzera.</p>
+    </details>
+    <details>
+      <summary>la loudness e i colori: continua o target</summary>
+      <p>La <b>loudness</b> (in LUFS) dice quanto forte suona un canale, in modo più vicino all'orecchio del picco. Quanto
+        forte registrare dipende da cosa fai: una voce in studio non è un concerto dal mixer. Quindi di partenza il colore
+        non ti dice "bene" o "male".</p>
+      <div class="band cont" aria-hidden="true"></div>
+      <p class="muted">Modo <b>Continua</b> (di partenza): dal blu (piano) al magenta (forte), in un'unica sfumatura; distingue il silenzio dal rumore di fondo.</p>
+      <p>Se hai un obiettivo preciso passa al modo <b>Target</b>: scegli una fascia di volume, oppure lascia che suns la tari
+        sulla tua voce in 10 secondi, e il colore ti dice se la stai seguendo.</p>
+      <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="muted">Blu sotto il target, lilla dentro, magenta sopra. Il preset "Podcast" va da −27 a −15 LUFS; ci sono
+        anche "Microfono integrato" e "Mixer live", e puoi regolarla a mano. Si cambia in Impostazioni › Misure › Colori loudness.</p>
+    </details>
+    <details>
+      <summary>la vista fonico e i numeri</summary>
+      <p>Toccando il grafico vedi i numeri: la loudness a breve termine (LUFS ST) in grande, sotto la loudness momentanea
+        (LUFS M) e il picco in dBFS. Con la <b>vista Fonico</b> il LED è sostituito da un meter di picco vero e proprio.</p>
+    </details>
+
+    <!-- 6. nerd -->
+    <h2><span class="n">05</span>sotto il cofano</h2>
+    <p class="muted">Per chi vuole sapere con che metro misuriamo. Se non ti interessa, puoi saltare tutto.</p>
+    <div class="lab">
+      <div>
+        <h4>la loudness</h4>
+        <p>Misurata con lo standard ITU-R BS.1770, con il filtro K che pesa le frequenze come le sente l'orecchio. "M" è la
+          misura su una finestra di 400 ms, "ST" su 3 s. L'unità è il LUFS.</p>
+      </div>
+      <div>
+        <h4>il picco</h4>
+        <p>Tre scale per il LED: <b>Semplice</b> (la nostra), <b>EBU</b> e <b>SMPTE</b>, quelle dei broadcaster. Il clip è
+          sempre 0 dBFS, qualunque scala scegli.</p>
+      </div>
+      <div>
+        <h4>i file</h4>
+        <p>Un WAV a 24 bit per canale, che apri in qualsiasi programma di montaggio. Nelle impostazioni sperimentali
+          anche WAV a 16 bit, ALAC (senza perdita) e AAC.</p>
+      </div>
+      <div>
+        <h4>i canali</h4>
+        <p>Da 1 a 64, da qualunque scheda o mixer USB class compliant. Un'unica app per iPhone, iPad e Mac.</p>
+      </div>
+    </div>
+
+    <!-- 7. il resto -->
+    <h2><span class="n">06</span>e poi</h2>
+    <ul>
+      <li><b>Registra a schermo bloccato</b>, e la vedi sulla schermata di blocco (su iPhone e iPad; il Mac resta sveglio da solo). Al 20 % e al 10 % di batteria ti avvisa.</li>
+      <li><b>Prima di partire</b> ti ricorda le cose che fermano una ripresa: modalità aereo con il Wi-Fi spento, sveglie, telefono in carica.</li>
+      <li><b>Se una telefonata o una sveglia ferma la ripresa</b>, chiude i file e riparte da sola in una nuova ripresa dello stesso progetto.</li>
+      <li>Se il dispositivo fa fatica a scrivere, <b>te lo dice prima</b> che si perda qualcosa; se perde dei campioni, te lo dice subito.</li>
+      <li><b>Marker</b> e una <b>scaletta</b> da spuntare: ogni punto spuntato è un marker. Progetti e riascolto, anche dal nome del progetto.</li>
+      <li><b>Niente account, niente cloud</b>: è tutto sul tuo dispositivo (nell'app File su iPhone e iPad, in Musica › suns sul Mac).</li>
+    </ul>
+    <details>
+      <summary>il reparto esperimenti</summary>
+      <p>In Impostazioni › Sperimentali c'è la roba ancora in prova. Usala, ma senza fidarti troppo:</p>
+      <ul>
+        <li><b>Formato di registrazione</b>: oltre al WAV 24 bit, WAV 16 bit, ALAC e AAC. In ALAC e AAC, se l'app si chiude di colpo, la ripresa può sparire tutta; per questo, se la batteria scende al 5 % (fuori carica), suns si ferma da sola e salva i file.</li>
+        <li><b>Esportazione</b> (da attivare con "Abilita esportazione"): un progetto o una ripresa in un file ZIP, in WAV, ALAC o AAC.</li>
+        <li><b>Prova di carico</b>: fa registrare una demo con tanti canali e ti dice se il dispositivo regge, quanto scalda e quanta batteria si mangia.</li>
+        <li><b>Ripara le riprese interrotte</b>: se l'app si chiude di colpo durante una ripresa in WAV, alla riapertura sistema i file.</li>
+      </ul>
+    </details>
+
+    <h2><span class="n">07</span>su cosa gira</h2>
+    <ul>
+      <li><b>iPhone o iPad con iOS 27.</b> Più vecchio? Per ora niente. Su iPhone sta in verticale, su iPad gira in tutte le direzioni.</li>
+      <li><b>Mac con macOS 27</b>: la stessa app, nativa sul Mac, con le schede audio del Mac.</li>
+      <li><b>Schede e mixer USB class compliant.</b> Provata con UMC202HD, XR18 e X32 su iPhone; un iPhone SE del 2020 si è fatto 18 canali per 40 minuti senza perdere un campione. Sul Mac, per ora, con un microfono USB e con la demo a 18 canali; con un mixer multicanale vero ancora no.</li>
+      <li>Con la presa Lightning serve un adattatore USB.</li>
+      <li><b>Su un iPad vero non l'ho mai provata.</b></li>
+    </ul>
+
+    <h2><span class="n">08</span>beta in arrivo</h2>
+    <p class="warn">suns è in beta: per ora la provano in pochi. Quando la beta si apre a più persone, il link per installarla con TestFlight comparirà qui.</p>
+    <p>Intanto, se hai domande o una scheda da provare: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <p><a href="supporto.html">supporto</a> · <a href="privacy.html">privacy</a></p>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span class="mark"><img src="img/logo.png" alt="savût.eu" width="60" height="24"> © 2026 savût</span>
+      <span><a href="mailto:support@savut.eu">support@savut.eu</a> · <a href="privacy.html">privacy</a></span>
+    </div>
+  </footer>
+</body>
+</html>
