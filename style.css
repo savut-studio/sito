@@ -113,6 +113,34 @@ nav.site a.lang { margin-left: auto; }
 footer.site .mark { display: inline-flex; align-items: center; gap: 10px; }
 footer.site .mark img { height: 23px; width: auto; opacity: 0.6; }
 
+/* Pagina di suns: sezioni a scene, riquadri, dettagli apribili. */
+.top { text-align: center; margin: 6px 0 8px; }
+.top img { width: 96px; height: 96px; border-radius: 22px; }
+.top h1 { font-size: 38px; margin: 14px 0 6px; }
+.top .what { font-size: 20px; line-height: 1.45; margin: 0 auto 14px; max-width: 24em; }
+.top .how { color: var(--muted); max-width: 36em; margin: 0 auto 14px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 18px 0; }
+.card { padding: 18px 18px 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.card h3 { margin: 0 0 10px; font-size: 16px; }
+.card .big { font-size: 28px; color: var(--accent); line-height: 1; margin-bottom: 10px; }
+.card p { color: var(--muted); }
+.aside { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin: 22px 0; }
+details { margin: 10px 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+summary { cursor: pointer; padding: 12px 16px; font-weight: 700; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "+"; display: inline-block; width: 1.4em; color: var(--accent); }
+details[open] > summary::before { content: "–"; }
+details > :not(summary) { margin-left: 16px; margin-right: 16px; }
+details > :last-child { margin-bottom: 16px; }
+.lab { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 14px 0; }
+.lab > div { padding: 14px 16px 2px; border: 1px dashed var(--line); border-radius: 10px; }
+.lab h4 { margin: 0 0 6px; font-size: 14px; color: var(--accent); }
+.lab p { font-size: 13.5px; color: var(--muted); }
+.steps3 { display: grid; gap: 10px; margin: 16px 0; }
+.steps3 > div { display: grid; grid-template-columns: 110px 1fr; gap: 14px; align-items: start; }
+.steps3 b { color: var(--accent); }
+@media (max-width: 520px) { .top h1 { font-size: 32px; } .top .what { font-size: 18px; } .steps3 > div { grid-template-columns: 1fr; gap: 0; } }
+
 @media (max-width: 520px) {
   body { font-size: 14px; }
   main { padding-top: 36px; }
