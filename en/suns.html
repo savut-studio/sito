@@ -22,112 +22,159 @@
   </header>
 
   <main class="wrap app-suns">
-    <div class="hero">
+
+    <div class="top">
       <img src="../img/suns.png" alt="suns icon">
+      <h1>suns</h1>
+      <p class="what">A multitrack audio recorder for iPhone, iPad and Mac.</p>
+      <p class="how">Plug in an audio interface or a mixer with a USB port and press Record.<br>Every channel ends up in its own file.</p>
+      <p class="how">To connect, all you need is the right USB adapter or cable. No special hardware required.</p>
+      <p><span class="tag on">[ beta coming soon ]</span></p>
+    </div>
+
+    <h2><span class="n">01</span>the basic idea</h2>
+    <p>To see what it's for, picture two different people.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>the podcaster</h3>
+        <p>With a phone, an audio interface and two microphones, on the move and without plugging into the mains. You connect,
+          press Record and take the interview home.</p>
+        <p>While recording you keep an eye on the levels and drop markers at the important moments.</p>
+        <p>When you finish, the files are already there on the phone: one track per person, ready to edit, with your markers.</p>
+      </div>
+      <div class="card">
+        <h3>the sound engineer</h3>
+        <p>You're running a concert: a mixer with lots of channels, a computer. You connect the mixer to the Mac, choose on the
+          mixer what to send to suns, and every channel lands on its own track, while you check at a glance that nothing "clips".</p>
+        <p>You do the mix the next day, starting from separate tracks.</p>
+      </div>
+    </div>
+    <p class="aside">But these aren't two apps. <b>It's always the same suns</b>, and you can mix and match: 48 channels from a mixer
+      on a phone, or your Mac used for a single USB microphone.<br>The limits are your imagination and your needs.</p>
+
+    <h2><span class="n">02</span>how to read it, what you see</h2>
+    <p>With colours. While you record there are <b>two things</b> to watch, always, and that's all you need.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="big">▲</div>
+        <h3>CLIP: did it go over the top?</h3>
+        <p>If the sound is louder than what the interface can represent, it <b>clips</b>: the part above is lost and
+          <b>can't be recovered in any way</b>. When it happens, the warning triangle turns red and counts how many times: if you
+          see it while recording, turn it down.</p>
+      </div>
+      <div class="card">
+        <div class="big">●</div>
+        <h3>LOUDNESS: is the level enough?</h3>
+        <p>The <b>colour</b> of the channel tells you how loud it sounds, more or less as the ear hears it: from blue (quiet)
+          to magenta (loud). How loud it should be is up to you, and you can even set a precise level to aim for.</p>
+      </div>
+    </div>
+    <div class="shots one">
+      <figure><img src="../img/beta-pillole.jpg" alt="Forty-eight channels as coloured pills, with the clip triangle">
+        <figcaption>the smallest version: one pill per channel, 48 here. Colour and triangle, nothing else.</figcaption></figure>
+    </div>
+
+    <h2><span class="n">03</span>more room, more you see</h2>
+    <p>suns is made to always show you every channel you're recording, so you don't risk missing a problem.</p>
+    <p>The information is always the same. But, depending on the room on the screen, each channel grows and tells you more:</p>
+    <div class="steps3">
+      <div><b>pill</b><span>colour and clip triangle.</span></div>
+      <div><b>tile</b><span>plus the peak LED (see below), the one you're used to seeing on mixers.</span></div>
+      <div><b>graph</b><span>the last few seconds, with a red tick for every clip: you see whether it was a single hit or a problem that keeps going.</span></div>
+      <div><b>numbers</b><span>for those who want absolute precision.</span></div>
+    </div>
+    <div class="shots">
+      <figure><img src="../img/beta-mattonelle.jpg" alt="Eight channels as coloured tiles with the LED">
+        <figcaption>the tiles: colour, LED and triangle</figcaption></figure>
+      <figure><img src="../img/beta-grafico.jpg" alt="One channel large with its graph, red clip ticks, and the other channels below">
+        <figcaption>the graph: the last few seconds and the clip ticks</figcaption></figure>
+      <figure><img src="../img/beta-numeri.jpg" alt="One channel with numbers: −27.6 LUFS ST, −23.8 LUFS M, peak −13.2 dBFS">
+        <figcaption>the numbers, all of them</figcaption></figure>
+    </div>
+
+    <h2><span class="n">04</span>ok, nice, but I want to know more</h2>
+    <details>
+      <summary>peak and clip</summary>
+      <p>The <b>peak</b> (in dBFS) is the highest value the audio signal has reached. As on mixers, three colours (green,
+        yellow, red) help you read the value. In the app you can pick the scale you're used to working with.</p>
+      <p>The <b>clip</b> is not up for debate: it's when the signal hits 0 dBFS, and the signal is damaged.</p>
+      <p>The triangle goes from grey to red, with the number of events (a tap resets it).</p>
+    </details>
+    <details>
+      <summary>loudness and colours: continuous or target</summary>
+      <p><b>Loudness</b> (in LUFS) tells you how loud a channel sounds, closer to how the human ear hears it.</p>
+      <p>When you record there is no magic value to hit: it depends on what you're doing, and a voice in a studio is not a
+        concert off a mixer. So by default the colour doesn't tell you "good" or "bad".</p>
+      <div class="band cont" aria-hidden="true"></div>
+      <p class="muted"><b>Continuous</b> mode (default): from blue (quiet) to magenta (loud), in a single gradient; it tells silence from background noise.</p>
+      <p>If you do have a precise goal, switch to <b>Target</b> mode: pick a level range, or let suns calibrate it on your voice
+        in 10 seconds, and the colour tells you whether you're following it.</p>
+      <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="muted">Blue below the target, lilac inside, magenta above. Use the presets in the app or create your own range.</p>
+    </details>
+    <details>
+      <summary>I want all the information possible</summary>
+      <p>You can overlay the numbers on the graph and the tiles, depending on the room available: short-term loudness
+        (LUFS ST) large, below it momentary loudness (LUFS M) and the peak in dBFS.</p>
+      <p>With the <b>Sound engineer view</b>, the LED is replaced by a proper peak meter, and you can add the graduated scale.</p>
+    </details>
+
+    <h2><span class="n">05</span>technical aside: for measurement nerds only</h2>
+    <p class="muted">For those who want to know what yardstick we measure with. If you don't care, skip it all.</p>
+    <div class="lab">
       <div>
-        <h1>suns</h1>
-        <p>Multitrack recorder for iPhone, iPad and Mac, from class-compliant USB interfaces and mixers. <span class="tag on">[ beta coming soon ]</span></p>
+        <h4>loudness</h4>
+        <p>Measured with the ITU-R BS.1770 standard, with the K filter that weighs frequencies the way the ear hears them. "M" is
+          the measurement over a 400 ms window, "ST" over 3 s. The unit is the LUFS.</p>
+      </div>
+      <div>
+        <h4>peak</h4>
+        <p>Three scales for the LED: <b>Simple</b> (ours), <b>EBU</b> and <b>SMPTE</b>, the broadcasters' ones. The clip is
+          always 0 dBFS, whatever scale you choose.</p>
+      </div>
+      <div>
+        <h4>files</h4>
+        <p>WAV, ALAC and AAC. You choose between the rock-solid reliability of WAV, the compressed but lossless coding of ALAC,
+          and the excellent compression of AAC to keep the space used to a minimum.</p>
+      </div>
+      <div>
+        <h4>channels</h4>
+        <p>From 1 to 48, from any class-compliant USB interface or mixer (basically the ones that work without drivers, very
+          common). One app for iPhone, iPad and Mac.</p>
       </div>
     </div>
 
-    <p class="lead">Plug your phone (or Mac) into a class-compliant multichannel USB audio interface or mixer (the kind that works without drivers), hit Record, and every channel goes to its own
-      file. 1 to 48 channels. Meanwhile you watch the colours and know at a glance whether it's going well or someone is shouting.</p>
-    <p>The TestFlight beta is about to start: when it's ready, the way to try it will appear here.</p>
-
-    <h2>the idea</h2>
-    <p>Know at a glance, from the colours, how the recording is going. There are two main measurements:</p>
+    <h2><span class="n">06</span>and plenty more to make your life easier</h2>
     <ul>
-      <li><b>Peak</b> (in dBFS): tells you whether the signal went <b>out of range</b>. It's the <b>LED</b>. If it touches
-        the ceiling (0 dBFS) the clip <b>triangle</b> turns red and counts how many times it happened.</li>
-      <li><b>Loudness</b> (in LUFS): tells you <b>how loud it sounds</b>, more or less as the ear hears it. It's the
-        <b>colour</b> of the channel.</li>
+      <li><b>Records with the screen locked</b>, and you see it on the lock screen (on iPhone and iPad; the Mac stays awake by itself). It warns you at 20 % and 10 % battery.</li>
+      <li><b>Before you start</b> it reminds you of the things that stop a take: airplane mode with Wi-Fi off, alarms, phone charging.</li>
+      <li><b>If a phone call or an alarm stops the take</b>, it closes the files and restarts by itself in a new take of the same project.</li>
+      <li>If the device struggles to write, <b>it tells you beforehand</b> that something could be lost; if it drops samples, it tells you right away.</li>
+      <li><b>Markers</b> and a <b>checklist</b> to tick off: every ticked item is a marker. Projects and playback, even by project name.</li>
+      <li><b>No account, no cloud</b>: everything is on your device (in the Files app on iPhone and iPad, in Music › suns on the Mac).</li>
     </ul>
-    <p>Whether you have room for a graph, a tile or just a pill, you always see these two measurements, with the clip warning.</p>
-    <div class="shots">
-      <figure><img src="../img/beta-grafico.jpg" alt="One channel large with its graph, red clip ticks, and the other channels below">
-        <figcaption>the graph: the last few seconds, with red ticks for clips</figcaption></figure>
-      <figure><img src="../img/beta-mattonelle.jpg" alt="Eight channels as coloured tiles with the LED">
-        <figcaption>tiles: colour, LED and triangle</figcaption></figure>
-      <figure><img src="../img/beta-pillole.jpg" alt="Forty-eight channels as coloured pills">
-        <figcaption>48 channels as pills: the colour stays, and the triangle if there's a clip</figcaption></figure>
-    </div>
+    <details>
+      <summary>the experiments department</summary>
+      <p>In Settings › Experimental there's the stuff still being tested. Go ahead and use it, and let me know how it goes:</p>
+      <ul>
+        <li><b>Export</b> (turn on with "Enable export"): a project or a take as a ZIP file, in WAV, ALAC or AAC.</li>
+        <li><b>Load test</b>: records a demo with lots of channels and tells you whether the device copes, how hot it gets and how much battery it eats.</li>
+        <li><b>Repair interrupted takes</b>: if the app quits suddenly during a WAV take, it fixes the files when you reopen it.</li>
+      </ul>
+    </details>
 
-    <h3>peak: there's a standard for that</h3>
-    <p>For the LED you pick the scale: <b>Simple</b> (our own: green is fine, yellow from −6 dBFS, red from −1 dBFS, meaning
-      you're at the limit) or the broadcasters' standards, <b>EBU</b> or <b>SMPTE</b>. Clipping is not up for debate: it's
-      when the signal touches the maximum (0 dBFS). The triangle is grey with a 0 while all is well; on a clip it turns red
-      with the count, and a tap resets it.</p>
-
-    <h3>loudness: there's no right or wrong here</h3>
-    <p>How loud to record depends on what you're doing: a voice in a studio is not a concert from a mixer. So by default the
-      colour doesn't say "good" or "bad": it runs from blue (quiet) to magenta (loud) in one gradient, and tells silence
-      from background noise.</p>
-    <div class="band cont" aria-hidden="true"></div>
-    <p class="muted">Continuous mode (the default): from blue to magenta, no right or wrong zone.</p>
-    <p>If you do have a specific goal, switch to <b>Target</b> mode: pick a loudness range, or let suns calibrate it on your
-      voice in 10 seconds, and the colour tells you whether you're following it.</p>
-    <div class="band" aria-hidden="true"><span></span><span></span><span></span></div>
-    <p class="muted">Blue below the target, lilac inside it, magenta above it. The "Podcast" preset runs from −27 to −15
-      LUFS; there are also "Built-in microphone" and "Live mixer", and you can set it by hand. Change it in Settings ›
-      Measures › Loudness colours.</p>
-
-    <h3>and if you're fond of numbers</h3>
-    <p>Those are there too: tap the graph. Here with the Engineer view (the peak meter instead of the LED) and the EBU scale.</p>
-    <div class="shots one">
-      <figure><img src="../img/beta-numeri.jpg" alt="One channel with numbers: −27.6 LUFS ST, −23.8 LUFS M, peak −13.2 dBFS, peak meter on the EBU scale">
-        <figcaption>LUFS ST large, with LUFS M and peak in dBFS below</figcaption></figure>
-    </div>
-
-    <h2>what it does</h2>
+    <h2><span class="n">07</span>what it runs on</h2>
     <ul>
-      <li><b>One 24-bit WAV per channel</b>: open them in any editor.</li>
-      <li><b>Up to 48 channels</b>, from a little 2-input interface to a big mixer. The phone's or Mac's own microphone works too.</li>
-      <li><b>Records with the screen locked</b>, and you can see it on the lock screen (on iPhone and iPad; a Mac stays awake by itself). At 20 % and 10 % battery it warns
-        you, on the lock screen too.</li>
-      <li><b>Before you start</b>: when you press Record it reminds you of what can stop a take (aeroplane mode with Wi-Fi
-        off, alarms, phone on charge).</li>
-      <li><b>If a call or an alarm stops the take</b>, it closes the files and starts again by itself in a new take of the
-        same project (switch it off in Avoid interruptions › Restart by itself).</li>
-      <li>If the phone struggles to write, <b>it warns you before</b> anything is lost; if it loses samples, it tells you
-        straight away.</li>
-      <li><b>Markers</b> and a <b>running order</b> to tick off: every ticked item is a marker.</li>
-      <li><b>Projects and playback</b> with markers, also from the project name: "Play the last take".</li>
-      <li><b>No account, no cloud</b>: everything is on your device (in the Files app on iPhone and iPad, in Music › suns on a Mac).</li>
-      <li>If you get lost: Settings › Tips and help › I don't know where to start.</li>
-    </ul>
-    <p class="muted">The app is in Italian for now; English is on its way.</p>
-
-    <h2>the experiments department</h2>
-    <p>In Settings › Experimental there's the stuff still being tested. Use it, but don't trust it too much:</p>
-    <ul>
-      <li><b>Recording format</b>: besides 24-bit WAV, 16-bit WAV, ALAC (lossless) and AAC (very small). Careful, though: in
-        ALAC and AAC, if the app is killed abruptly, the whole take can vanish. That's why, if the battery drops to 5 %
-        (not charging), suns stops by itself and saves the files.</li>
-      <li><b>Export</b> (switch on with "Enable export"): a project or a take as a ZIP file, in WAV, ALAC or AAC. Long takes
-        take a while.</li>
-      <li><b>Load test</b>: has the phone record a demo with lots of channels and tells you whether it copes, how hot it
-        gets and how much battery it uses.</li>
-      <li><b>Repair interrupted takes</b>: if the app is killed abruptly during a WAV take, it fixes the files when you
-        reopen it.</li>
+      <li><b>iPhone or iPad with iOS 27.</b> Older? Nothing for now. On iPhone it stays in portrait, on iPad it rotates every way.</li>
+      <li><b>Mac with macOS 27</b>: the same app, native on the Mac, with the Mac's audio interfaces.</li>
+      <li><b>Class-compliant USB interfaces and mixers.</b> Tried with various mixers and interfaces, plus the ones you'll try ;)</li>
     </ul>
 
-    <h2>what it runs on</h2>
-    <ul>
-      <li><b>iPhone or iPad with iOS 27.</b> Older? Not for now. On iPhone it stays upright; on iPad it turns in every direction.</li>
-      <li><b>Mac with macOS 27</b>: the same app, native on the Mac, using the Mac's audio devices. Tried with a USB microphone and the 18-channel demo; not yet with a real multichannel mixer.</li>
-      <li><b>Class-compliant USB interfaces and mixers</b> ("driverless"). Tried with UMC202HD, XR18 and X32; an iPhone SE
-        (2020) recorded 18 channels for 40 minutes without losing a sample.</li>
-      <li>With a Lightning port you obviously need a USB adapter.</li>
-      <li><b>It has never been tried on a real iPad.</b></li>
-    </ul>
-
-    <h2>beta coming soon</h2>
-    <p class="warn">suns is in beta: for now only a few people are trying it. When the beta opens up, the link to install it
-      with TestFlight will appear here.</p>
-    <p>Meanwhile, if you have questions or an interface to try: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
-
-    <h2>info</h2>
+    <h2><span class="n">08</span>beta coming soon</h2>
+    <p class="warn">suns is in beta: for now only a few people are trying it. When the beta opens to more people, the link to install it with TestFlight will appear here.</p>
+    <p>In the meantime, if you have questions or an interface to try: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
     <p><a href="support.html">support</a> · <a href="privacy.html">privacy</a></p>
+
   </main>
 
   <footer class="site">
