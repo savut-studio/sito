@@ -71,7 +71,6 @@ li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
 .tool.c-suns { border-color: #A9B6FF; }
 .tool.c-vos { border-color: #4CC2B3; }
 .tool.c-cine { border-color: #F5C04A; }
-a.tool:hover { background: #1b1b1f; }
 .tool img { width: 56px; height: 56px; border-radius: 13px; grid-row: span 2; }
 .tool .name { font-weight: 700; font-size: 16px; }
 .tool .desc { grid-column: 2 / 4; color: var(--muted); font-size: 14px; }
