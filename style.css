@@ -67,7 +67,11 @@ li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
   padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
   color: var(--text); text-decoration: none;
 }
-a.tool:hover { border-color: var(--accent); }
+/* Ogni app ha il bordo del suo colore (suns pervinca, vôs verde acqua, cine ambra). */
+.tool.c-suns { border-color: #A9B6FF; }
+.tool.c-vos { border-color: #4CC2B3; }
+.tool.c-cine { border-color: #F5C04A; }
+a.tool:hover { background: #1b1b1f; }
 .tool img { width: 56px; height: 56px; border-radius: 13px; grid-row: span 2; }
 .tool .name { font-weight: 700; font-size: 16px; }
 .tool .desc { grid-column: 2 / 4; color: var(--muted); font-size: 14px; }
