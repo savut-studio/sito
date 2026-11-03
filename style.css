@@ -26,6 +26,8 @@ a { color: var(--accent); text-decoration: underline; text-decoration-color: col
 a:hover { text-decoration-color: var(--accent); }
 /* Colore proprio di suns: il pervinca, nel contenuto delle sue pagine (la barra in alto resta quella del sito). */
 .app-suns { --accent: #A9B6FF; }
+.app-vos { --accent: #4CC2B3; }
+.app-cine { --accent: #F5C04A; }
 
 .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
 

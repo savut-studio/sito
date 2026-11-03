@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cine · savût</title>
+  <meta name="description" content="cine is a media player for live events: video, images and audio in a cue list, a GO button and a second screen that shows only what you decide.">
+  <link rel="icon" href="../img/favicon.png">
+  <link rel="alternate" hreflang="it" href="../cine.html">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <nav class="site">
+        <a class="home" href="./" aria-label="home"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg></a>
+        <a href="suns.html">suns</a>
+        <a href="vos.html">vôs</a>
+        <a href="cine.html" aria-current="page">cine</a>
+        <a href="support.html">support</a>
+        <a class="lang" href="../cine.html" hreflang="it" lang="it" title="Italiano">it</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap app-cine">
+
+    <div class="top">
+      <img src="../img/cine.svg" alt="cine icon">
+      <h1>cine</h1>
+      <p class="what">A media player for live events.</p>
+      <p class="how">Line up video, images and audio, press GO and the next one plays. On the second screen, the one facing the audience, only what you decide comes out.</p>
+      <p><span class="tag on">[ early beta ]</span></p>
+    </div>
+
+    <h2><span class="n">01</span>the basic idea</h2>
+    <p>Simple, yet professional: made for people who have never used show-control software, with the complexity hidden until you go looking for it.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>the conference</h3>
+        <p>An opening sting, the guests' videos, the speakers' slides as images. Everything is a cue in the list: press GO when it's time and it goes on air.</p>
+        <p>Behind it you can keep a looping background: when a cue ends that stays, never black or the desktop.</p>
+      </div>
+      <div class="card">
+        <h3>the event</h3>
+        <p>Music, films, graphics. You stay at your screen and see what's on air, what's next, and what happens at the end of each cue.</p>
+        <p>You can change the list even after the show has started: the cue on air is never touched.</p>
+      </div>
+    </div>
+    <p class="aside">One cue on air at a time: <b>cine is a player</b>, not VJ software. No stacked layers, no overlapping audio.</p>
+
+    <h2><span class="n">02</span>how to read it</h2>
+    <p>Left to right: <b>Preview → GO → On air</b>. One colour per state, throughout the app.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="big">●</div>
+        <h3>red: on air</h3>
+        <p>What the audience is watching right now. Below the monitor, big, the time remaining (red in the last 10 s).</p>
+      </div>
+      <div class="card">
+        <div class="big">●</div>
+        <h3>green: starts with GO</h3>
+        <p>The next one, already open and ready. The GO button always tells you what it will start.</p>
+      </div>
+      <div class="card">
+        <div class="big">●</div>
+        <h3>blue: selected</h3>
+        <p>You've clicked it: you see it in Preview and hear it, without it going on air. Then you decide: "Make next" or "Go now".</p>
+      </div>
+    </div>
+
+    <h2><span class="n">03</span>two ways to use it</h2>
+    <p>Same cues, same engine, same file: only the view changes. You can switch even with the show running (⌘1, ⌘2).</p>
+    <ul>
+      <li><b>List</b>: a list in order. GO plays the next one, which advances by itself. Ideal for anything that follows a script.</li>
+      <li><b>Tiles</b>: a grid of tiles with thumbnails. One click selects, Return or GO plays, keys 1–9 play straight away. Ideal for things you pull out when needed.</li>
+    </ul>
+
+    <h2><span class="n">04</span>tell me more</h2>
+    <details>
+      <summary>what happens at the end of a cue</summary>
+      <p>You decide for each cue: it stops; it holds on the last frame until you press GO, or for a number of seconds; the next one starts; it loops (forever or N times) and then does one of the others.</p>
+      <p>Coming in and going out: a cut or a dissolve, as long as you like. "Finish" lets a loop end its current round and then do its end action. "Black" (the B key) takes everything to black in 1 s.</p>
+    </details>
+    <details>
+      <summary>in and out points, fit, fill, stretch</summary>
+      <p>In Preview you see the whole file and mark where it should start and end (I and O, as in editing software). For video and images you choose whether to Fit (with bars), Fill (cropping) or Stretch.</p>
+    </details>
+    <details>
+      <summary>a show is a file</summary>
+      <p>A show is a .cine package with a readable file inside (JSON). It opens with a double-click in the Finder, ⌘Z and ⇧⌘Z undo and redo every change, and if a file has been moved it finds it again (and if it's missing, the cue turns red and GO won't start it).</p>
+    </details>
+
+    <h2><span class="n">05</span>under the hood</h2>
+    <div class="lab">
+      <div><h4>one engine</h4><p>Video and audio are read as samples and locked to the audio interface's clock. GO reaches the screen in about 2 refreshes, always the same.</p></div>
+      <div><h4>the output</h4><p>A full-screen window on the second screen, with no menu bar or Dock. If the cable comes out, cine notices, and when the output returns it goes back to full screen by itself.</p></div>
+      <div><h4>frame rates</h4><p>Each cue tells you whether its frame rate is compatible with the screen: 25p and 50p on 50 Hz run clean; 29.97p or 30p stutter.</p></div>
+    </div>
+
+    <h2><span class="n">06</span>what it runs on (and what's missing)</h2>
+    <ul>
+      <li><b>Mac with macOS 26 or later.</b> iPad later on, as a remote.</li>
+      <li><b>Files only</b>: video, images and audio. Countdowns and clocks will go in another app.</li>
+      <li><b>External control</b> (OSC, then MIDI) <b>isn't there yet</b>. Starts are always manual.</li>
+      <li>Programme audio on an interface of your choice, plus Preview listening on a second interface.</li>
+    </ul>
+
+    <h2><span class="n">07</span>early beta</h2>
+    <p class="warn">cine is just starting out: the first test version (0.1) is on TestFlight for a small group only. When the beta opens up, the link will appear here.</p>
+    <p>In the meantime, if you have questions or an event to try it on: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <p><a href="support.html">support</a> · <a href="../privacy.html">privacy</a></p>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span class="mark"><img src="../img/logo.png" alt="savût.eu" width="60" height="24"> © 2026 savût</span>
+      <span><a href="mailto:support@savut.eu">support@savut.eu</a> · <a href="../privacy.html">privacy</a></span>
+    </div>
+  </footer>
+</body>
+</html>
