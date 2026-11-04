@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>vôs · savût</title>
-  <meta name="description" content="vôs è un editor audio per il parlato, sul Mac: una corsia per ogni voce, volumi livellati, pause pulite, tagli che si vedono.">
+  <meta name="description" content="vôs è un editor audio per il parlato, sul Mac, per podcast e interviste a più voci.">
   <link rel="icon" href="img/favicon.png">
   <link rel="alternate" hreflang="en" href="en/vos.html">
   <link rel="stylesheet" href="style.css">
@@ -26,93 +26,27 @@
   <main class="wrap app-vos">
 
     <div class="top">
-      <img src="img/vos.svg" alt="Icona di vôs">
+      <img src="img/vos.svg" alt="">
       <h1>vôs</h1>
       <p class="what">Un editor audio per il parlato, sul Mac.</p>
-      <p class="how">Una registrazione a più voci, anche lunga un'ora, diventa un episodio: una corsia per ogni voce, volumi allineati, pause ripulite, tagli che si vedono.</p>
+      <p class="how">Pensato per podcast e interviste a più voci.</p>
       <p><span class="tag on">[ beta agli inizi ]</span></p>
     </div>
 
-    <h2><span class="n">01</span>l'idea di base</h2>
-    <p>vôs nasce per chi monta parlato: podcast, interviste, dialoghi a più voci.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>la registrazione</h3>
-        <p>Ognuno ha il suo file: anche a distanza, anche di un'ora. Le voci restano allineate fra loro come quando sono state registrate.</p>
-        <p>Le musiche e le sigle sono clip libere: stanno nelle loro corsie e non vengono tagliate insieme alle voci.</p>
-      </div>
-      <div class="card">
-        <h3>il montaggio</h3>
-        <p>Una corsia per ogni voce (e per ogni musica), con la forma d'onda in dB. Tagli, sposti, allunghi, e vedi sempre cosa si muove insieme a quello che tocchi.</p>
-        <p>Se vieni da REAPER, importi il montaggio e continui da qui.</p>
-      </div>
-    </div>
-    <p class="aside">Ogni modifica si annulla con ⌘Z.</p>
-
-    <h2><span class="n">02</span>cosa fa per te</h2>
-    <p>Tre cose che di solito si fanno a mano, con pochi controlli ciascuna.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="big">≈</div>
-        <h3>Livella</h3>
-        <p>Porta tutte le voci allo stesso volume, senza alzare il rumore delle pause: lavora solo dove c'è davvero la voce. Su una registrazione vera di tre voci da un'ora lo sbalzo di livello fra le frasi è sceso da 2–4 dB a circa 1 dB.</p>
-      </div>
-      <div class="card">
-        <div class="big">✂</div>
-        <h3>Pulisci</h3>
-        <p>Dove una voce tace a lungo c'è solo rientro del microfono e rumore. Pulisci li trova e li abbassa, oppure li taglia (e li rende muti o li toglie).</p>
-      </div>
-      <div class="card">
-        <div class="big">▤</div>
-        <h3>Uscita</h3>
-        <p>Compressori leggeri sulle voci e sui gruppi, un limitatore, e un obiettivo di loudness da raggiungere. Il meter ti dice dove sei.</p>
-      </div>
-    </div>
-
-    <h2><span class="n">03</span>montare, a vista</h2>
-    <p>Quello che sposti, lo vedi. Quando trascini un taglio, una freccia blu mostra su ogni corsia chi si muove con lui, e un avviso compare dove due clip si sovrappongono o il movimento si ferma.</p>
+    <h2><span class="n">01</span>qualche assaggio</h2>
     <ul>
-      <li><b>Ripple e Libero</b>: allungando un bordo, o quello che segue va dietro (Ripple) oppure si muove solo la clip (Libero). Cambi modo con un tasto.</li>
-      <li><b>Taglio da vicino</b>: doppio clic su un taglio, e vedi l'audio prima e dopo; lo sposti a passi di 10 ms e scegli il crossfade.</li>
-      <li><b>Volume a vista</b>: una linea sulla forma d'onda di ogni clip. Con un intervallo scelto abbassi solo quel pezzo, con le rampe ai bordi (un duck, per intenderci).</li>
-      <li><b>Corsie grandi e compatte</b>: scegli tu quali corsie vedere grandi; le altre diventano barre sottili, e vedi sempre tutto senza scorrere.</li>
-      <li><b>Skim</b>: una linea chiara segue il puntatore, e il play parte da lì.</li>
+      <li><b>Livella</b>: porta le voci allo stesso volume, ma solo dove si parla: il rumore delle pause non sale.</li>
+      <li><b>Pulisci</b>: trova dove una voce tace e abbassa o taglia il rientro degli altri microfoni.</li>
+      <li>Muovi un taglio e <b>vedi chi si muove con lui</b>, corsia per corsia.</li>
+      <li><b>Taglio da vicino</b>: doppio clic su un taglio, e lo sposti a passi di 10 ms.</li>
+      <li>Una linea del volume su ogni clip: selezioni un pezzo, lo trascini giù, hai fatto un duck.</li>
+      <li>Viene da REAPER? <b>Importi il montaggio</b> e continui da qui.</li>
     </ul>
+    <p class="aside">Per ora solo Mac, e <b>l'esportazione non c'è ancora</b>.</p>
 
-    <h2><span class="n">04</span>voglio saperne di più</h2>
-    <details>
-      <summary>come funziona la Livella</summary>
-      <p>Analizza tutto il file (la loudness ogni 100 ms) e mette sul file una curva di guadagno. Una voce "parla" se sta sopra −50 LUFS e non più di 6 dB sotto la voce più forte in quel momento, così il rientro nel microfono dell'altro non conta.</p>
-      <p>Un guadagno fisso porta la media del parlato all'obiettivo (di base −20 LUFS, al massimo ±30 dB); poi la media in 1,5 s decide una correzione di al massimo ±10 dB, a non più di 6 dB al secondo. Nelle pause il guadagno torna a quello fisso, senza alzare il rumore.</p>
-    </details>
-    <details>
-      <summary>come funziona Pulisci</summary>
-      <p>Per capire dove parla la voce diretta, vôs usa il classificatore di suoni del Mac, insieme alla loudness. Per le registrazioni a distanza (ognuno il suo file, silenzio quando parla l'altro) riconosce da solo che non serve confrontare le voci.</p>
-      <p>Di base pulisce solo dove la voce tace da 5 s in su, con 1 s di margine prima e dopo e una dissolvenza da 1 s. Tre modi: <b>Abbassa</b> (−10, −15, −20 dB o muto), <b>Taglia e rendi muto</b>, <b>Taglia e togli</b>. Si rifà, si annulla, e c'è «Riporta sonori i muti».</p>
-    </details>
-    <details>
-      <summary>l'uscita: compressori, limitatore, loudness</summary>
-      <p>La catena è sempre la stessa: Livella, volume della clip, compressore della corsia, compressore del gruppo, guadagno d'uscita, limitatore a −1 dBTP. I compressori hanno tre scelte: poco, medio, tanto.</p>
-      <p>L'obiettivo di loudness è −16 LUFS di base (puoi scegliere −14, −19 o −23). Il meter misura quello che esce, e «Correggi» porta la loudness integrata di quello che hai ascoltato sull'obiettivo.</p>
-    </details>
-
-    <h2><span class="n">05</span>sotto il cofano</h2>
-    <div class="lab">
-      <div><h4>la loudness</h4><p>Misurata con lo standard ITU-R BS.1770 (LUFS), con il filtro K che pesa le frequenze come le sente l'orecchio.</p></div>
-      <div><h4>il suono</h4><p>I file sono WAV mappati in memoria e letti 5 s in anticipo; il thread audio non alloca e non usa lock. Gli altri formati (MP3, AAC, ALAC) vengono convertiti una volta in WAV a 24 bit.</p></div>
-      <div><h4>l'importazione</h4><p>Da REAPER: una traccia diventa una corsia, un item una clip, con posizioni, dissolvenze e mute. Effetti, volumi e automazioni no.</p></div>
-    </div>
-
-    <h2><span class="n">06</span>su cosa gira (e cosa manca)</h2>
-    <ul>
-      <li><b>Mac con chip Apple e macOS 27.</b> L'iPad più avanti.</li>
-      <li><b>L'esportazione non c'è ancora.</b> Oggi si monta e si ascolta; il file finale arriva dopo.</li>
-      <li>Le <b>fasi guidate</b> (oggi c'è solo il montaggio) e altro ancora sono in lista.</li>
-    </ul>
-
-    <h2><span class="n">07</span>beta agli inizi</h2>
-    <p class="warn">vôs è all'inizio: la prima versione di prova (0.1) è su TestFlight solo per un gruppo ristretto. Quando la beta si aprirà, il link comparirà qui.</p>
-    <p>Intanto, se hai domande o un montaggio difficile da provare: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <h2><span class="n">02</span>beta agli inizi</h2>
+    <p class="warn">La prima versione di prova è su TestFlight solo per un gruppo ristretto. Quando si apre, il link comparirà qui.</p>
+    <p>Domande o un montaggio da provare? <a href="mailto:support@savut.eu">support@savut.eu</a></p>
     <p><a href="supporto.html">supporto</a> · <a href="privacy.html">privacy</a></p>
 
   </main>

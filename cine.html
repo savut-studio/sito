@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>cine · savût</title>
-  <meta name="description" content="cine è un player multimediale per eventi dal vivo: video, immagini e audio in scaletta, un tasto GO e un secondo schermo che mostra solo quello che decidi tu.">
+  <meta name="description" content="cine è un player multimediale per eventi dal vivo: video, immagini e audio in scaletta, e un tasto GO.">
   <link rel="icon" href="img/favicon.png">
   <link rel="alternate" hreflang="en" href="en/cine.html">
   <link rel="stylesheet" href="style.css">
@@ -26,89 +26,27 @@
   <main class="wrap app-cine">
 
     <div class="top">
-      <img src="img/cine.svg" alt="Icona di cine">
+      <img src="img/cine.svg" alt="">
       <h1>cine</h1>
       <p class="what">Un player multimediale per eventi dal vivo.</p>
-      <p class="how">Metti in fila video, immagini e audio, premi GO e parte il prossimo. Sul secondo schermo, quello del proiettore, esce solo quello che decidi tu.</p>
+      <p class="how">Video, immagini e audio in scaletta. Premi GO e parte il prossimo.</p>
       <p><span class="tag on">[ beta agli inizi ]</span></p>
     </div>
 
-    <h2><span class="n">01</span>l'idea di base</h2>
-    <p>Semplice, ma da professionisti: pensato per chi non ha mai usato un programma da regia, con la complessità nascosta finché non la cerchi.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>la conferenza</h3>
-        <p>Una sigla d'ingresso, i video degli ospiti, le immagini dei relatori. Ogni cosa è un cue in scaletta: premi GO quando serve e va in onda.</p>
-        <p>Dietro puoi tenere uno sfondo in loop: quando un cue finisce resta quello, mai il nero né il desktop.</p>
-      </div>
-      <div class="card">
-        <h3>l'evento</h3>
-        <p>Musiche, filmati, grafiche. Tu stai al tuo schermo e vedi cosa sta andando in onda, cosa c'è dopo, e cosa succede alla fine di ogni cue.</p>
-        <p>Cambi la scaletta anche a spettacolo partito: il cue in onda non si tocca.</p>
-      </div>
-    </div>
-    <p class="aside">Un cue in onda alla volta: <b>cine è un player</b>, non un programma per vj. Niente livelli sovrapposti, niente audio sovrapposti.</p>
-
-    <h2><span class="n">02</span>come si legge</h2>
-    <p>Da sinistra a destra: <b>Preview → GO → In onda</b>. Un colore per ogni stato, in tutta l'app.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="big">●</div>
-        <h3>rosso: in onda</h3>
-        <p>È quello che il pubblico sta guardando adesso. Sotto il monitor, grande, il tempo che manca (rosso negli ultimi 10 s).</p>
-      </div>
-      <div class="card">
-        <div class="big">●</div>
-        <h3>verde: parte con GO</h3>
-        <p>Il prossimo, già aperto e pronto. Il tasto GO ti dice sempre cosa fa partire.</p>
-      </div>
-      <div class="card">
-        <div class="big">●</div>
-        <h3>blu: selezionato</h3>
-        <p>Ci hai cliccato sopra: lo vedi in Preview e lo ascolti, senza che vada in onda. Poi decidi: «Metti come prossimo» o «Vai subito».</p>
-      </div>
-    </div>
-
-    <h2><span class="n">03</span>due modi di usarlo</h2>
-    <p>Stessi cue, stesso motore, stesso file: cambia solo la vista. Si cambia anche a show partito (⌘1, ⌘2).</p>
+    <h2><span class="n">01</span>qualche assaggio</h2>
     <ul>
-      <li><b>Scaletta</b>: una lista in ordine. GO lancia il prossimo, che avanza da solo. Ideale per quello che segue un copione.</li>
-      <li><b>Mattonelle</b>: una griglia di riquadri con la miniatura. Un clic sceglie, Invio o GO lancia, i tasti 1–9 lanciano subito. Ideale per le cose da tirare fuori quando serve.</li>
+      <li><b>Un solo cue in onda alla volta</b>: cine è un player, non un programma per vj.</li>
+      <li><b>Preview → GO → In onda</b>: vedi e ascolti il prossimo prima di mandarlo.</li>
+      <li>Scaletta o <b>mattonelle</b>: stessi cue, due modi di lanciarli (anche a show partito).</li>
+      <li>Per ogni cue decidi <b>cosa succede alla fine</b>: si ferma, resta, parte il successivo, fa il loop.</li>
+      <li>Il secondo schermo è <b>blindato</b>: se il cavo salta, quando torna l'uscita si rimette da sola.</li>
+      <li>Il tasto B porta tutto al <b>nero</b>.</li>
     </ul>
+    <p class="aside">Per ora solo Mac. I comandi esterni (OSC, MIDI) <b>non ci sono ancora</b>.</p>
 
-    <h2><span class="n">04</span>voglio saperne di più</h2>
-    <details>
-      <summary>cosa succede alla fine di un cue</summary>
-      <p>Lo decidi per ogni cue: si ferma; resta sull'ultimo fotogramma finché premi GO, oppure per un certo numero di secondi; parte il successivo; ripete (sempre o N volte) e poi fa una delle altre.</p>
-      <p>Entrare e uscire: taglio o dissolvenza, con la durata che vuoi. «Concludi» fa finire un loop il giro in corso e poi fa l'azione di fine. «Nero» (tasto B) porta tutto al nero in 1 s.</p>
-    </details>
-    <details>
-      <summary>inizio e fine, adatta, riempi, stira</summary>
-      <p>Nella Preview vedi tutto il file e segni dove deve cominciare e finire (I e O, come nei programmi di montaggio). Per video e immagini scegli se Adattare (con le bande), Riempire (tagliando) o Stirare.</p>
-    </details>
-    <details>
-      <summary>lo show è un file</summary>
-      <p>Uno show è un pacchetto .cine con dentro un file leggibile (JSON). Si apre con un doppio clic dal Finder, ⌘Z e ⇧⌘Z annullano e ripetono ogni modifica, e se un file è stato spostato lo ritrova (e se manca, il cue diventa rosso e GO non parte).</p>
-    </details>
-
-    <h2><span class="n">05</span>sotto il cofano</h2>
-    <div class="lab">
-      <div><h4>un solo motore</h4><p>Video e audio vengono letti a campioni e agganciati all'orologio della scheda audio. GO arriva sullo schermo in circa 2 refresh, sempre uguali.</p></div>
-      <div><h4>l'uscita</h4><p>Una finestra a tutto schermo sul secondo schermo, senza barra dei menu né Dock. Se il cavo si stacca, cine se ne accorge, e quando torna l'uscita si rimette da sola.</p></div>
-      <div><h4>fotogrammi</h4><p>Ogni cue dice se la sua frequenza è compatibile con lo schermo: 25p e 50p su 50 Hz vanno puliti; 29,97p o 30p scattano.</p></div>
-    </div>
-
-    <h2><span class="n">06</span>su cosa gira (e cosa manca)</h2>
-    <ul>
-      <li><b>Mac con macOS 26 o più recente.</b> L'iPad più avanti, come telecomando.</li>
-      <li><b>Solo file</b>: video, immagini e audio. Countdown e orologi andranno in un'altra app.</li>
-      <li><b>I comandi esterni</b> (OSC, poi MIDI) <b>non ci sono ancora</b>. Le partenze sono sempre a mano.</li>
-      <li>Audio del programma su una scheda a scelta, più l'ascolto della Preview su una seconda scheda.</li>
-    </ul>
-
-    <h2><span class="n">07</span>beta agli inizi</h2>
-    <p class="warn">cine è all'inizio: la prima versione di prova (0.1) è su TestFlight solo per un gruppo ristretto. Quando la beta si aprirà, il link comparirà qui.</p>
-    <p>Intanto, se hai domande o un evento su cui provarlo: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <h2><span class="n">02</span>beta agli inizi</h2>
+    <p class="warn">La prima versione di prova è su TestFlight solo per un gruppo ristretto. Quando si apre, il link comparirà qui.</p>
+    <p>Domande o un evento su cui provarlo? <a href="mailto:support@savut.eu">support@savut.eu</a></p>
     <p><a href="supporto.html">supporto</a> · <a href="privacy.html">privacy</a></p>
 
   </main>

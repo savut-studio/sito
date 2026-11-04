@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>vôs · savût</title>
-  <meta name="description" content="vôs is an audio editor for spoken word, on the Mac: one lane for each voice, levelled volumes, cleaned-up pauses, cuts you can see.">
+  <meta name="description" content="vôs is an audio editor for spoken word, on the Mac, for podcasts and multi-voice interviews.">
   <link rel="icon" href="../img/favicon.png">
   <link rel="alternate" hreflang="it" href="../vos.html">
   <link rel="stylesheet" href="../style.css">
@@ -26,93 +26,27 @@
   <main class="wrap app-vos">
 
     <div class="top">
-      <img src="../img/vos.svg" alt="vôs icon">
+      <img src="../img/vos.svg" alt="">
       <h1>vôs</h1>
       <p class="what">An audio editor for spoken word, on the Mac.</p>
-      <p class="how">A multi-voice recording, even an hour long, becomes an episode: one lane per voice, matched volumes, cleaned-up pauses, cuts you can see.</p>
+      <p class="how">Made for podcasts and multi-voice interviews.</p>
       <p><span class="tag on">[ early beta ]</span></p>
     </div>
 
-    <h2><span class="n">01</span>the basic idea</h2>
-    <p>vôs is made for people who edit speech: podcasts, interviews, multi-voice dialogue.</p>
-    <div class="cards">
-      <div class="card">
-        <h3>the recording</h3>
-        <p>Everyone has their own file: even remotely, even an hour long. The voices stay aligned with each other, just as they were recorded.</p>
-        <p>Music and jingles are free clips: they stay in their own lanes and aren't cut along with the voices.</p>
-      </div>
-      <div class="card">
-        <h3>the edit</h3>
-        <p>One lane per voice (and per piece of music), with the waveform in dB. You cut, move and stretch, and you always see what moves along with what you touch.</p>
-        <p>Coming from REAPER? Import the edit and carry on here.</p>
-      </div>
-    </div>
-    <p class="aside">Every change can be undone with ⌘Z.</p>
-
-    <h2><span class="n">02</span>what it does for you</h2>
-    <p>Three things that are usually done by hand, each with just a few controls.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="big">≈</div>
-        <h3>Level</h3>
-        <p>Brings all the voices to the same volume without raising the noise in the pauses: it only works where there's actually a voice. On a real recording of three hour-long voices, the level swing between phrases dropped from 2–4 dB to about 1 dB.</p>
-      </div>
-      <div class="card">
-        <div class="big">✂</div>
-        <h3>Clean up</h3>
-        <p>Where a voice stays quiet for a long time there's only microphone bleed and noise. Clean up finds those stretches and lowers them, or cuts them (and mutes or removes them).</p>
-      </div>
-      <div class="card">
-        <div class="big">▤</div>
-        <h3>Output</h3>
-        <p>Light compressors on voices and groups, a limiter, and a loudness target to hit. The meter tells you where you are.</p>
-      </div>
-    </div>
-
-    <h2><span class="n">03</span>editing you can see</h2>
-    <p>What you move, you see. While you drag a cut, a blue arrow shows on every lane what moves with it, and a warning appears where two clips overlap or the move stops.</p>
+    <h2><span class="n">01</span>a few tastes</h2>
     <ul>
-      <li><b>Ripple and Free</b>: stretch an edge and either everything after it follows (Ripple) or only that clip moves (Free). One key switches mode.</li>
-      <li><b>Close-up cut</b>: double-click a cut and you see the audio before and after; nudge it in 10 ms steps and pick the crossfade.</li>
-      <li><b>Volume at a glance</b>: a line on each clip's waveform. With a range selected you lower just that stretch, with ramps at the edges (a duck, in other words).</li>
-      <li><b>Big and compact lanes</b>: you choose which lanes are shown big; the others become thin bars, so you always see everything without scrolling.</li>
-      <li><b>Skim</b>: a light line follows the pointer, and playback starts from there.</li>
+      <li><b>Level</b>: brings the voices to the same volume, but only where someone is speaking: the noise in the pauses doesn't rise.</li>
+      <li><b>Clean up</b>: finds where a voice is silent and lowers or cuts the bleed from the other microphones.</li>
+      <li>Move a cut and <b>see what moves with it</b>, lane by lane.</li>
+      <li><b>Close-up cut</b>: double-click a cut and nudge it in 10 ms steps.</li>
+      <li>A volume line on every clip: select a stretch, drag it down, and you've made a duck.</li>
+      <li>Coming from REAPER? <b>Import the edit</b> and carry on here.</li>
     </ul>
+    <p class="aside">Mac only for now, and <b>there's no export yet</b>.</p>
 
-    <h2><span class="n">04</span>tell me more</h2>
-    <details>
-      <summary>how Level works</summary>
-      <p>It analyses the whole file (loudness every 100 ms) and puts a gain curve on the file. A voice is "speaking" if it's above −50 LUFS and no more than 6 dB below the loudest voice at that moment, so the bleed of one microphone into another doesn't count.</p>
-      <p>A fixed gain brings the average of the speech to the target (−20 LUFS by default, at most ±30 dB); then the average over 1.5 s sets a correction of at most ±10 dB, at no more than 6 dB per second. In the pauses the gain goes back to the fixed one, so the noise isn't lifted.</p>
-    </details>
-    <details>
-      <summary>how Clean up works</summary>
-      <p>To tell where the direct voice is speaking, vôs uses the Mac's sound classifier together with loudness. For remote recordings (each person their own file, silence while the other speaks) it recognises by itself that voices don't need to be compared.</p>
-      <p>By default it only cleans where the voice has been silent for 5 s or more, with 1 s of margin before and after and a 1 s fade. Three modes: <b>Lower</b> (−10, −15, −20 dB or mute), <b>Cut and mute</b>, <b>Cut and remove</b>. It can be redone and undone, and there's "Restore muted".</p>
-    </details>
-    <details>
-      <summary>the output: compressors, limiter, loudness</summary>
-      <p>The chain is always the same: Level, clip volume, lane compressor, group compressor, output gain, limiter at −1 dBTP. The compressors have three settings: light, medium, heavy.</p>
-      <p>The loudness target is −16 LUFS by default (you can choose −14, −19 or −23). The meter measures what comes out, and "Correct" brings the integrated loudness of what you've listened to onto the target.</p>
-    </details>
-
-    <h2><span class="n">05</span>under the hood</h2>
-    <div class="lab">
-      <div><h4>loudness</h4><p>Measured with the ITU-R BS.1770 standard (LUFS), with the K filter that weights frequencies the way the ear hears them.</p></div>
-      <div><h4>sound</h4><p>Files are WAVs mapped into memory and read 5 s ahead; the audio thread doesn't allocate and uses no locks. Other formats (MP3, AAC, ALAC) are converted once to 24-bit WAV.</p></div>
-      <div><h4>import</h4><p>From REAPER: a track becomes a lane, an item becomes a clip, with positions, fades and mutes. Effects, volumes and automation are not imported.</p></div>
-    </div>
-
-    <h2><span class="n">06</span>what it runs on (and what's missing)</h2>
-    <ul>
-      <li><b>Mac with Apple silicon and macOS 27.</b> iPad later on.</li>
-      <li><b>There's no export yet.</b> Right now you edit and listen; the final file comes later.</li>
-      <li>The <b>guided steps</b> (for now there's only editing) and more are on the list.</li>
-    </ul>
-
-    <h2><span class="n">07</span>early beta</h2>
-    <p class="warn">vôs is just starting out: the first test version (0.1) is on TestFlight for a small group only. When the beta opens up, the link will appear here.</p>
-    <p>In the meantime, if you have questions or a tricky edit to try: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <h2><span class="n">02</span>early beta</h2>
+    <p class="warn">The first test version is on TestFlight for a small group only. When it opens up, the link will appear here.</p>
+    <p>Questions, or an edit to try? <a href="mailto:support@savut.eu">support@savut.eu</a></p>
     <p><a href="support.html">support</a> · <a href="../privacy.html">privacy</a></p>
 
   </main>
