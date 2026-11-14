@@ -17,7 +17,8 @@
         <a href="suns.html" aria-current="page">suns</a>
         <a href="vos.html">vôs</a>
         <a href="cine.html">cine</a>
-        <a href="support.html">support</a>
+        <a href="about.html">about</a>
+        <a href="support.html#suns">support</a>
         <a class="lang" href="../suns.html" hreflang="it" lang="it" title="Italiano">it</a>
       </nav>
     </div>
@@ -27,57 +28,38 @@
 
     <div class="top">
       <img src="../img/suns.png" alt="suns icon">
-      <h1>suns</h1>
-      <p class="what">A multitrack audio recorder for iPhone, iPad and Mac.</p>
-      <p class="how">Plug in an audio interface or a mixer with a USB connection and press Record.<br>Every channel ends up in its own file.</p>
-      <p class="how">To connect, all you need is the right USB adapter or cable. No special hardware required.</p>
-      <p><span class="tag on">[ beta coming soon ]</span></p>
+      <h1>You already have a multitrack recorder in your pocket.</h1>
+      <p class="how">Plug a mixer or a USB audio interface into your device and press Record: every channel ends up in its own file. Up to 48 channels, on iPhone, iPad and Mac.</p>
+      <p><a class="btn" href="suns-beta.html">Join the beta →</a></p>
     </div>
 
-    <h2><span class="n">01</span>the basic idea</h2>
-    <p>To see what it's for, picture two different people.</p>
+    <h2><span class="n">01</span>two scenes, the same app</h2>
     <div class="cards">
       <div class="card">
-        <h3>the podcaster</h3>
-        <p>A phone, an audio interface and two microphones: you record on the move, no mains socket needed. You connect,
-          press Record and take the interview home.</p>
-        <p>While recording you keep an eye on the levels and drop markers at the important moments.</p>
-        <p>When you finish, the files are already there on the phone: one track per person, ready to edit, with your markers.</p>
+        <h3>at the desk</h3>
+        <p>You're at the mixer. You plug the USB cable into your device and see every channel, one by one. You take home the multitrack of the event, just in case.</p>
       </div>
       <div class="card">
-        <h3>the sound engineer</h3>
-        <p>You're recording a concert: you have a mixer with lots of channels and a computer. You connect the mixer to the Mac, choose on the
-          mixer what to send to suns, and every channel lands on its own track, while you check at a glance that nothing clips.</p>
-        <p>You do the mix the next day, starting from separate tracks.</p>
+        <h3>in your backpack</h3>
+        <p>A small two-input USB interface, two microphones, headphones. No computer, no mains socket. Press Record and go home with two clean tracks, ready to edit.</p>
       </div>
     </div>
-    <p class="aside">But these aren't two apps. <b>It's always the same suns</b>, and you can mix and match: 48 channels from a mixer
-      on a phone, or your Mac used for a single USB microphone.<br>The limits are your imagination and your needs.</p>
+    <p class="aside">It's the same app. Only what you plug into it changes.</p>
 
-    <h2><span class="n">02</span>how to read it, what you see</h2>
-    <p>With colours. While you record, there are <b>two things</b> to watch at all times, and that's all you need.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="big">▲</div>
-        <h3>CLIP: did it go over the top?</h3>
-        <p>If the sound is louder than what the interface can represent, it <b>clips</b>: the part above is lost and
-          <b>can't be recovered in any way</b>. When it happens, the warning triangle turns red and counts how many times: if you
-          see it while recording, turn it down.</p>
-      </div>
-      <div class="card">
-        <div class="big">●</div>
-        <h3>LOUDNESS: is the level enough?</h3>
-        <p>The <b>colour</b> of the channel tells you how loud it sounds, roughly as you'd perceive it: from blue (quiet)
-          to magenta (loud). How loud it should be is up to you, and you can even set a precise level to aim for.</p>
-      </div>
-    </div>
-    <div class="shots one">
-      <figure><img src="../img/beta-pillole.jpg" alt="Forty-eight channels as coloured pills, with the clip triangle">
-        <figcaption>the smallest version: one pill per channel, 48 here. Colour and triangle, nothing else.</figcaption></figure>
-    </div>
+    <h2><span class="n">02</span>two things to watch</h2>
+    <p>There are many ways to look at audio: different scales, waveforms, analysers. All useful, for those who can read them.<br>
+      But while you're recording you mainly need two things: how loud it is and whether it clipped.</p>
+    <p>suns is made to show you exactly these two.</p>
+    <ul>
+      <li>The <b>colour</b> of the channel is the loudness: how loud it sounds, roughly as the ear hears it.</li>
+      <li>A <b>red triangle</b> tells you the signal went over the top, and counts how many times.</li>
+    </ul>
+    <p>Level fine and no red triangle: you're taking home a recording ready for post-production. The rest can wait.</p>
+    <figure class="phone"><img src="../img/suns-telefono.png" alt="suns on iPhone: 18 channels as coloured tiles, with one clip flagged by the red triangle and the Record button at the bottom" width="600" height="1256">
+      <figcaption>suns with 18 channels (the test demo here): each channel is a tile, the colour is the loudness, the red triangle counts the clips.</figcaption></figure>
 
     <h2><span class="n">03</span>more room, more you see</h2>
-    <p>suns is made to always show you every channel you're recording, so you don't risk missing a problem.</p>
+    <p>suns is made to always show you every channel you're recording, so you notice right away if there's a problem.</p>
     <p>The information is always the same. But, depending on the room on the screen, each channel grows and tells you more:</p>
     <div class="steps3">
       <div><b>pill</b><span>colour and clip triangle.</span></div>
@@ -94,7 +76,8 @@
         <figcaption>the numbers, all of them</figcaption></figure>
     </div>
 
-    <h2><span class="n">04</span>ok, nice, but I want to know more</h2>
+
+    <h3>ok, nice, but I want to know more</h3>
     <details>
       <summary>peak and clip</summary>
       <p>The <b>peak</b> (in dBFS) is the highest value the audio signal has reached. As on mixers, three colours (green,
@@ -120,9 +103,9 @@
         (LUFS ST) large, below it momentary loudness (LUFS M) and the peak in dBFS.</p>
       <p>With the <b>Sound engineer view</b>, the LED is replaced by a proper peak meter, and you can add the graduated scale.</p>
     </details>
-
-    <h2><span class="n">05</span>technical aside: for measurement nerds only</h2>
-    <p class="muted">For those who want to know what yardstick we measure with. If you don't care, skip it all.</p>
+    <details>
+      <summary>technical aside: for measurement nerds only</summary>
+      <p class="muted">For those who want to know what yardstick we measure with. If you don't care, skip it all.</p>
     <div class="lab">
       <div>
         <h4>loudness</h4>
@@ -144,37 +127,28 @@
         <p>1 to 48 channels, on any class-compliant USB interface or mixer (basically the ones that work without drivers, and there are plenty). One app for iPhone, iPad and Mac.</p>
       </div>
     </div>
-
-    <h2><span class="n">06</span>and plenty more to make your life easier</h2>
-    <ul>
-      <li><b>Records with the screen locked</b>, and you see it on the lock screen (on iPhone and iPad; the Mac stays awake on its own). It warns you at 20 % and 10 % battery.</li>
-      <li><b>Before you start</b> it reminds you of the safest setup: airplane mode with Wi-Fi off, no alarms, phone plugged in.</li>
-      <li><b>If a phone call or an alarm stops the take</b>, it closes the files and restarts by itself in a new take of the same project.</li>
-      <li>If the device struggles to write data to storage, <b>it tells you beforehand</b> that something could be lost; if it drops samples, it tells you right away.</li>
-      <li><b>Markers</b> and a <b>checklist</b> to tick off: every ticked item is a marker. Projects and playback, even by project name.</li>
-      <li><b>No account, no cloud</b>: everything is on your device (in the Files app on iPhone and iPad, in Music › suns on the Mac).</li>
-    </ul>
-    <details>
-      <summary>the experiments department</summary>
-      <p>In Settings › Experimental there's the stuff still being tested. Go ahead and use it, and let me know how it goes:</p>
-      <ul>
-        <li><b>Export</b> (turn on with "Enable export"): a project or a take as a ZIP file, in WAV, ALAC or AAC.</li>
-        <li><b>Load test</b>: records a demo with lots of channels and tells you whether the device copes, how hot it gets and how much battery it eats.</li>
-        <li><b>Repair interrupted takes</b>: if the app quits suddenly during a WAV take, it fixes the files when you reopen it.</li>
-      </ul>
     </details>
 
-    <h2><span class="n">07</span>what it runs on</h2>
+    <h2><span class="n">04</span>if something goes wrong, you know right away</h2>
+    <p>I can't promise nothing will ever happen. What I can tell you is that I've spent most of my time making recording reliable. And if something goes wrong, you don't find out at home: you know right away.</p>
     <ul>
-      <li><b>iPhone or iPad with iOS 26 or later</b> (it runs on iOS 27 too). Older? Nothing for now. On iPhone it stays in portrait, on iPad it rotates every way.</li>
-      <li><b>Mac with macOS 26 or later</b> (it runs on macOS 27 too): the same app, native on the Mac, with the Mac's audio interfaces.</li>
-      <li><b>Class-compliant USB interfaces and mixers.</b> Tried with various mixers and interfaces, plus the ones you'll try ;)</li>
+      <li>If the device struggles to write data to storage, it tells you before anything is lost. If it drops samples, it tells you straight away.</li>
+      <li>If a phone call or an alarm comes in, it closes the files and starts again by itself in a new take (I can't switch those off, but in the app I explain how to avoid them).</li>
+      <li>With the storage almost full it stops by itself and saves the complete take.</li>
+      <li>If you unplug the USB cable during the take, the files stay readable.</li>
+      <li>It warns you when the battery runs low.</li>
+      <li>It also records with the screen locked.</li>
     </ul>
+    <p class="aside"><b>What it doesn't do:</b> it doesn't record phone calls (iOS doesn't allow it), it doesn't edit, it doesn't use Bluetooth as an input.</p>
 
-    <h2><span class="n">08</span>beta coming soon</h2>
-    <p class="warn">suns is in beta: for now only a few people are trying it. When the beta opens to more people, the link to install it with TestFlight will appear here.</p>
-    <p>In the meantime, if you have questions or an interface to try: <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
-    <p><a href="support.html">support</a> · <a href="privacy.html">privacy</a></p>
+    <h2><span class="n">05</span>how it came about</h2>
+    <p>suns came from a need of mine: I wanted a portable tool for small multitrack recordings. I couldn't find one, so I decided to build it myself.</p>
+    <p>Then, out of curiosity, instead of the little interface I plugged in a live mixer, to see how far it would go. To my surprise even an old phone recorded all 32 channels of an X32 without a hitch. From there suns changed: now it's a tool I carry around and plug into any USB mixer that comes my way.</p>
+
+    <h2><span class="n">06</span>join the beta</h2>
+    <p>suns is in beta: it works, I use it at work, but it still needs running in. On the beta page you'll find how to install it, what it has been tested with and what I ask in return.</p>
+    <p><a class="btn" href="suns-beta.html">Join the beta →</a></p>
+    <p class="muted">No account, no cloud: the files stay on your device.</p>
 
   </main>
 
@@ -182,6 +156,7 @@
     <div class="wrap">
       <span class="mark"><img src="../img/logo.png" alt="savût.eu" width="60" height="24"> © 2026 savût</span>
       <span><a href="mailto:support@savut.eu">support@savut.eu</a> · <a href="privacy.html">privacy</a></span>
+      <p class="about">savût · training and tools for people who work with audio and video</p>
     </div>
   </footer>
 </body>

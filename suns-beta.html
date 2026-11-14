@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>beta di suns · savût</title>
+  <meta name="description" content="Come installare la beta di suns con TestFlight, cosa è stato provato e cosa ti chiedo in cambio.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="alternate" hreflang="en" href="en/suns-beta.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <nav class="site">
+        <a class="home" href="./" aria-label="home"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg></a>
+        <a href="suns.html">suns</a>
+        <a href="vos.html">vôs</a>
+        <a href="cine.html">cine</a>
+        <a href="chi-siamo.html">chi siamo</a>
+        <a href="supporto.html#suns">supporto</a>
+        <a class="lang" href="en/suns-beta.html" hreflang="en" lang="en" title="English">en</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap app-suns">
+
+    <div class="top">
+      <img src="img/suns.png" alt="Icona di suns">
+      <h1>Benvenuto nella beta di suns.</h1>
+    </div>
+
+    <p>È gratis (ci mancherebbe altro, è una beta). Ti chiedo una cosa sola: usala in un lavoro vero e dimmi com'è andata, anche in due righe. Cosa non va, cosa ti manca, cosa ti ha fatto bestemmiare.</p>
+    <p>La beta è aperta a 50 persone. Se il link non va più, i posti sono finiti: scrivimi lo stesso.</p>
+    <p class="warn"><b>Finché è in beta, non usarla come unica registrazione per l'evento della tua vita.</b> Tieni sempre una copia su qualcos'altro.</p>
+
+    <h2><span class="n">01</span>come si installa</h2>
+    <ol class="steps">
+      <li>Scarica <b>TestFlight</b> dall'App Store, su iPhone, iPad o Mac. È di Apple ed è gratis.</li>
+      <li>Dal dispositivo su cui vuoi suns, tocca il pulsante qui sotto.</li>
+      <li>In TestFlight tocca <b>Installa</b>.</li>
+    </ol>
+    <!-- SEGNAPOSTO: il link del nuovo gruppo pubblico arriva da Alex (non b1xaKZYX) -->
+    <p><a class="btn" href="#">Installa con TestFlight</a> <span class="tag">[ link in arrivo ]</span></p>
+    <p class="muted">Serve iOS, iPadOS o macOS 26 o successivi.</p>
+
+    <h2><span class="n">02</span>con cosa l'ho provata</h2>
+    <p>L'ho provata con telefoni vecchi e nuovi, un iPad e svariati computer. E con mixer e schede come Behringer X32, XR18, Wing e UMC202HD, Yamaha TF-Rack…</p>
+    <p>Le schede e i mixer USB class compliant (quelli che funzionano senza driver) dovrebbero andare tutti. "Dovrebbero", appunto: le combinazioni sono troppe per provarle tutte da solo. Mi piacerebbe avere dispositivi e periferiche infinite, ma prima dovete farmi diventare ricco.</p>
+    <p>È compatibile con iOS, iPadOS e macOS 26, ma la maggior parte delle prove è stata fatta con la 27.</p>
+    <p class="aside"><b>L'hai provata con la tua scheda o il tuo mixer?</b> Scrivimelo: dispositivo, scheda, quanti canali e quanto è durata. Mi serve per sapere cosa funziona e cosa no.</p>
+    <p>Se poi mi mandi una foto di suns al lavoro, un banco, un palco, il tuo zaino, ancora meglio. Dimmi se posso metterla qui: senza il tuo permesso non pubblico niente, e se vuoi le facce le oscuro.</p>
+
+    <h2><span class="n">03</span>come segnalare un problema</h2>
+    <p>Dall'app: <b>Impostazioni › Segnala un problema</b>. Prepara una mail con il registro degli eventi dell'app, che mi aiuta a capire cosa è successo. Oppure scrivi a <a href="mailto:support@savut.eu">support@savut.eu</a>.</p>
+    <p>Per aiutarmi, dimmi:</p>
+    <ul>
+      <li>che dispositivo e che sistema usi</li>
+      <li>che scheda o mixer, e quanti canali</li>
+      <li>cosa stavi facendo quando è successo</li>
+      <li>se è successo una volta o succede sempre</li>
+    </ul>
+
+    <h2><span class="n">04</span>note tecniche</h2>
+    <ul>
+      <li><b>Canali:</b> da 1 a 48 (il limite l'ho messo io).</li>
+      <li><b>Frequenza:</b> quella della scheda, senza conversioni. Provata per ora fino a 48 kHz.</li>
+      <li><b>Formati:</b> WAV 24 bit (di partenza, il più sicuro), WAV 16 bit, ALAC 24 bit (senza perdita), AAC 256 e 128 kbps. L'AAC arriva fino a 48 kHz: sopra, suns registra in WAV 24 bit.</li>
+      <li><b>File:</b> un file mono per canale. I WAV sono Broadcast WAV, con data e ora di inizio, e oltre i 4 GB diventano RF64. I marker stanno dentro il WAV e in un file .csv accanto.</li>
+      <li><b>Dove finiscono:</b> nell'app File su iPhone e iPad, in Musica › suns sul Mac.</li>
+      <li><b>Misure:</b> loudness ITU-R BS.1770 (LUFS M a 400 ms, LUFS ST a 3 s), picco di campione in dBFS.</li>
+    </ul>
+
+    <p><a href="suns.html">← torna a suns</a> · <a href="supporto.html#suns">supporto</a> · <a href="privacy.html">privacy</a></p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span class="mark"><img src="img/logo.png" alt="savût.eu" width="60" height="24"> © 2026 savût</span>
+      <span><a href="mailto:support@savut.eu">support@savut.eu</a> · <a href="privacy.html">privacy</a></span>
+      <p class="about">savût · formazione e strumenti per chi lavora con l'audio e il video</p>
+    </div>
+  </footer>
+</body>
+</html>
